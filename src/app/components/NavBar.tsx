@@ -7,6 +7,7 @@ import { BREAKPOINTS, links } from "../../data/utils";
 import { useEffect, useState } from "react";
 import { useBreakpoint } from "use-breakpoint";
 import { Menu } from "./Menu";
+import { useHydrated } from "@/hooks/useHydrated";
 
 const navbarItems = [
   {
@@ -32,6 +33,7 @@ const NavBar = () => {
   const [closestNavbarItem, setClosestNavbarItem] = useState(navbarItems[0]);
   const { breakpoint } = useBreakpoint(BREAKPOINTS);
   const isDesktop = breakpoint === "desktop";
+  const hydrated = useHydrated();
 
   const handleClick = (element: string) => {
     const elementToScroll = document.getElementById(element);
@@ -81,6 +83,10 @@ const NavBar = () => {
   }, []);
 
   const renderNavbarItem = (item: NavbarItem) => {
+    if (!hydrated) {
+      return <div key={`navbar-item-${item.element}`}></div>;
+    }
+
     return (
       <div
         key={`navbar-item-${item.element}`}

@@ -9,8 +9,10 @@ const Experience = () => {
         Experience
       </p>
       <div className="flex mb-8">
-        <p className="text-white font-medium pr-2">Resume</p>
-        <AiOutlineDownload color="white" size={20} />
+        <a href="VishruthRajResume.pdf" download className="flex">
+          <p className="text-white font-medium pr-2">Resume</p>
+          <AiOutlineDownload color="white" size={20} />
+        </a>
       </div>
       <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
         {experiences.map((experience) => (
