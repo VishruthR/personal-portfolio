@@ -30,7 +30,7 @@ export const SingleExperience = ({ experience }: SingleExperienceProps) => {
 
   if (isMobile) {
     return (
-      <div className="hover:bg-white hover:bg-opacity-10 hover:border-2 hover:border-white hover:border-opacity-30 rounded-md space-y-4">
+      <div className="border-2 h-full border-backgroundBlack hover:bg-white hover:bg-opacity-10 hover:border-white hover:border-opacity-30 rounded-md space-y-4">
         <a href={experience.link} target="_blank">
           <div className="flex items-center">
             <p className="text-white font-bold mr-2 leading-none">
@@ -57,7 +57,7 @@ export const SingleExperience = ({ experience }: SingleExperienceProps) => {
 
   return (
     <a href={experience.link} target="_blank">
-      <div className="hover:bg-white hover:bg-opacity-10 hover:border-2 hover:border-white hover:border-opacity-30 rounded-md space-y-4 p-3">
+      <div className="border-2 h-full border-backgroundBlack hover:bg-white hover:bg-opacity-10 hover:border-white hover:border-opacity-30 rounded-md space-y-4 p-3">
         <div className="flex items-center">
           <p className="text-white font-bold mr-2 leading-none">
             {experience.name}

@@ -9,12 +9,15 @@ const Contact = () => {
 
   if (isMobile) {
     return (
-      <div className="flex pb-2 mb-1 items-center border-b-2 border-b-white opacity-50">
+      <a
+        className="flex pb-2 mb-1 items-center border-b-2 border-b-white opacity-50"
+        href="mailto:vishraj248@gmail.com"
+      >
         <MdEmail color="white" size={16} />
         <a className="text-white text-sm pl-2 leading-none">
           <p>vishraj248@gmail.com</p>
         </a>
-      </div>
+      </a>
     );
   }
 
@@ -25,12 +28,12 @@ const Contact = () => {
           Contact Me
         </p>
       )}
-      <div className="flex pb-3 items-center">
+      <a className="flex pb-3 items-center" href="mailto:vishraj248@gmail.com">
         <MdEmail color="white" size={24} />
         <a className="text-white font-semibold pl-3 leading-none">
           <p>vishraj248@gmail.com</p>
         </a>
-      </div>
+      </a>
     </div>
   );
 };

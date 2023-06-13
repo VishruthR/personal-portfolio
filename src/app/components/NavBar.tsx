@@ -82,11 +82,11 @@ const NavBar = () => {
     };
   }, []);
 
-  const renderNavbarItem = (item: NavbarItem) => {
-    if (!hydrated) {
-      return <div key={`navbar-item-${item.element}`}></div>;
-    }
+  if (!hydrated) {
+    return null;
+  }
 
+  const renderNavbarItem = (item: NavbarItem) => {
     return (
       <div
         key={`navbar-item-${item.element}`}
