@@ -61,7 +61,6 @@ const Projects = () => {
           <Project key={`project-${project.name}`} project={project} />
         ))}
       </Carousel>
-      ;
     </div>
   );
 };
