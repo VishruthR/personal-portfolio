@@ -109,7 +109,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="flex justify-between sticky top-0 left-0 z-[2000] items-center w-full bg-backgroundBlack h-14 border-b-4 border-b-white">
+    <div className="flex justify-between sticky top-0 left-0 z-[2000] items-center w-full bg-backgroundBlack h-14 border-b-[3px] border-b-white">
       <div className="flex px-2">
         <a href={links.github} target="_blank">
           <AiFillGithub className="mx-2" color="white" size={32} />

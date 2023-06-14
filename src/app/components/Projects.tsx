@@ -56,6 +56,7 @@ const Projects = () => {
         responsive={responsive}
         keyBoardControl={true}
         partialVisbile={true}
+        infinite={true}
       >
         {projects.map((project) => (
           <Project key={`project-${project.name}`} project={project} />

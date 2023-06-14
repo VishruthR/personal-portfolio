@@ -10,7 +10,7 @@ const Contact = () => {
   if (isMobile) {
     return (
       <a
-        className="flex pb-2 mb-1 items-center border-b-2 border-b-white opacity-50"
+        className="flex pb-2 mb-2 items-center border-b-2 border-b-white opacity-50"
         href="mailto:vishraj248@gmail.com"
       >
         <MdEmail color="white" size={16} />
