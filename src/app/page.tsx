@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Experience />
         <Projects />
       </div>
+      <Analytics />
     </div>
   );
 }
