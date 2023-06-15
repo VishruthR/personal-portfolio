@@ -21,10 +21,14 @@ const Landing = () => {
       <div className="flex flex-col w-full py-10 mb-8 space-y-2" id="landing">
         <div>
           <div>
-            <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
-          </div>
-          <div>
-            <p className="text-white font-bold">CS + Linguistics @ UIUC</p>
+            <div>
+              <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
+            </div>
+            <div>
+              <p className="text-white font-bold text-3xl">
+                CS + Linguistics @ UIUC
+              </p>
+            </div>
           </div>
           <div>
             <p className="text-white opacity-75">

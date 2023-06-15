@@ -4,10 +4,28 @@ import { projects } from "@/data/projects";
 import { Project } from "./Project";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import "@/app/styles.css";
+
+interface CustomDotProps {
+  onClick: () => void;
+  active: boolean;
+}
 
 const responsive = {
+  desktopPlus: {
+    breakpoint: { max: 3000, min: 1570 },
+    items: 4,
+    slidesToSlide: 1,
+    partialVisibilityGutter: 0,
+  },
+  desktopMid: {
+    breakpoint: { max: 1570, min: 1450 },
+    items: 3,
+    slidesToSlide: 1,
+    partialVisibilityGutter: 70,
+  },
   desktop: {
-    breakpoint: { max: 3000, min: 1350 },
+    breakpoint: { max: 1450, min: 1350 },
     items: 3,
     slidesToSlide: 1,
     partialVisibilityGutter: 40,
@@ -44,24 +62,49 @@ const responsive = {
   },
 };
 
+const CustomDot = ({ onClick, active }: CustomDotProps) => {
+  return (
+    <div
+      onClick={(e) => {
+        onClick();
+        e.preventDefault();
+      }}
+      className="flex items-center justify-center rounded-full w-3 h-3 bg-lightGray mx-2"
+    >
+      <div
+        className={`rounded-full w-2 h-2 ${
+          active ? "bg-lightGray " : "bg-darkGray"
+        }`}
+      />
+    </div>
+  );
+};
+
 const Projects = () => {
   return (
     <div className="my-8 py-8" id="projects">
       <p className="text-white font-bold md:text-6xl sm:text-4xl mb-8">
         Projects
       </p>
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        responsive={responsive}
-        keyBoardControl={true}
-        partialVisbile={true}
-        infinite={true}
-      >
-        {projects.map((project) => (
-          <Project key={`project-${project.name}`} project={project} />
-        ))}
-      </Carousel>
+      <div className="min-h-[350px]">
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          responsive={responsive}
+          keyBoardControl={true}
+          partialVisbile={true}
+          infinite={true}
+          showDots={true}
+          // @ts-ignore
+          customDot={<CustomDot />}
+        >
+          {projects.map((project) => (
+            <div key={`project-${project.name}`} className="h-[97%]">
+              <Project project={project} />
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 };

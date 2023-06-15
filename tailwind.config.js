@@ -12,6 +12,7 @@ module.exports = {
         darkGray: "#1D1D1D",
         teal: "#2DD4BF",
         textTeal: "#5EEAD4",
+        lightGray: "#c7c5c5",
       },
       height: {
         home: "90vh",
