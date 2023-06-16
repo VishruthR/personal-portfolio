@@ -61,9 +61,19 @@ const Landing = () => {
           </div>
         </div>
         <div>
-          <p className="text-white opacity-75 max-w-[400px]">
+          <p className="text-white opacity-75">
             {`I'm a student passionate about creating technology to improve
             people's lives`}
+          </p>
+        </div>
+        <div>
+          <p className="text-white opacity-75">
+            {`I’m currently interning as a software developer @ GrammaTech and volunteering as a software developer @ Hack4Impact.`}
+          </p>
+        </div>
+        <div>
+          <p className="text-white opacity-75">
+            {`I’m a huge fan of all sports and love to stay active in my free time. I’m also very passionate about education accessibility and equity.`}
           </p>
         </div>
         <Contact />
