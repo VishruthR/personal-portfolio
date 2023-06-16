@@ -20,22 +20,16 @@ const Landing = () => {
     return (
       <div className="flex flex-col w-full py-10 mb-8 space-y-2" id="landing">
         <div>
-          <div>
-            <div>
-              <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
-            </div>
-            <div>
-              <p className="text-white font-bold text-3xl">
-                CS + Linguistics @ UIUC
-              </p>
-            </div>
-          </div>
-          <div>
-            <p className="text-white opacity-75">
-              {`I'm a student passionate about creating technology to improve
+          <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
+        </div>
+        <div>
+          <p className="text-white font-bold">CS + Linguistics @ UIUC</p>
+        </div>
+        <div>
+          <p className="text-white opacity-75">
+            {`I'm a student passionate about creating technology to improve
           people's lives`}
-            </p>
-          </div>
+          </p>
         </div>
         <Contact />
         <div className="flex flex-col w-full justify-center lg:items-center items-center md:items-end">
@@ -56,14 +50,18 @@ const Landing = () => {
     <div className="flex w-full py-10 mb-8" id="landing">
       <div className="flex flex-col w-1/2 justify-around">
         <div>
-          <p className="text-white font-bold mg:text-5xl md:text-4xl">Hi,</p>
-          <p className="text-white font-bold mg:text-5xl md:text-4xl">{`I'm Vishruth Raj`}</p>
+          <div>
+            <p className="text-white font-bold mg:text-5xl md:text-4xl">Hi,</p>
+            <p className="text-white font-bold mg:text-5xl md:text-4xl">{`I'm Vishruth Raj`}</p>
+          </div>
+          <div>
+            <p className="text-white font-bold text-lg opacity-90 mt-3">
+              CS + Linguistics @ UIUC
+            </p>
+          </div>
         </div>
         <div>
-          <p className="text-white font-bold">CS + Linguistics @ UIUC</p>
-        </div>
-        <div>
-          <p className="text-white opacity-75">
+          <p className="text-white opacity-75 max-w-[400px]">
             {`I'm a student passionate about creating technology to improve
             people's lives`}
           </p>

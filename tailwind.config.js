@@ -13,6 +13,7 @@ module.exports = {
         teal: "#2DD4BF",
         textTeal: "#5EEAD4",
         lightGray: "#c7c5c5",
+        buttonColor: "#050505",
       },
       height: {
         home: "90vh",

@@ -5,6 +5,7 @@ import { Project } from "./Project";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "@/app/styles.css";
+import { CarouselButtonGroup } from "./CarouselArrows";
 
 interface CustomDotProps {
   onClick: () => void;
@@ -30,14 +31,20 @@ const responsive = {
     slidesToSlide: 1,
     partialVisibilityGutter: 40,
   },
+  tabletPlusPlus: {
+    breakpoint: { max: 1350, min: 1200 },
+    items: 2,
+    slidesToSlide: 1,
+    partialVisibilityGutter: 140,
+  },
   tabletPlus: {
-    breakpoint: { max: 1350, min: 1100 },
+    breakpoint: { max: 1200, min: 1100 },
     items: 2,
     slidesToSlide: 1,
     partialVisibilityGutter: 100,
   },
   tablet: {
-    breakpoint: { max: 1200, min: 940 },
+    breakpoint: { max: 1100, min: 940 },
     items: 2,
     slidesToSlide: 1,
     partialVisibilityGutter: 40,
@@ -49,13 +56,13 @@ const responsive = {
     partialVisibilityGutter: 300,
   },
   mobilePlus: {
-    breakpoint: { max: 800, min: 643 },
+    breakpoint: { max: 800, min: 490 },
     items: 1,
     slidesToSlide: 1,
     partialVisibilityGutter: 150,
   },
   mobile: {
-    breakpoint: { max: 643, min: 0 },
+    breakpoint: { max: 490, min: 0 },
     items: 1,
     slidesToSlide: 1,
     partialVisibilityGutter: 0,
@@ -82,7 +89,7 @@ const CustomDot = ({ onClick, active }: CustomDotProps) => {
 
 const Projects = () => {
   return (
-    <div className="my-8 py-8" id="projects">
+    <div className="my-8 py-8 relative" id="projects">
       <p className="text-white font-bold md:text-6xl sm:text-4xl mb-8">
         Projects
       </p>
@@ -95,8 +102,12 @@ const Projects = () => {
           partialVisbile={true}
           infinite={true}
           showDots={true}
+          arrows={false}
           // @ts-ignore
           customDot={<CustomDot />}
+          renderButtonGroupOutside={true}
+          // @ts-ignore
+          customButtonGroup={<CarouselButtonGroup />}
         >
           {projects.map((project) => (
             <div key={`project-${project.name}`} className="h-[97%]">
