@@ -11,6 +11,7 @@ const Landing = () => {
   const hydrated = useHydrated();
   const { breakpoint } = useBreakpoint(BREAKPOINTS);
   const isMobile = breakpoint === "mobile";
+  const isDesktop = breakpoint === "desktop";
 
   if (!hydrated) {
     return null;
@@ -61,21 +62,23 @@ const Landing = () => {
           </div>
         </div>
         <div>
-          <p className="text-white opacity-75">
+          <p className="text-white opacity-75 max-w-[500px]">
             {`I'm a student passionate about creating technology to improve
             people's lives`}
           </p>
         </div>
         <div>
-          <p className="text-white opacity-75">
+          <p className="text-white opacity-75 max-w-[500px]">
             {`I’m currently interning as a software developer @ GrammaTech and volunteering as a software developer @ Hack4Impact.`}
           </p>
         </div>
-        <div>
-          <p className="text-white opacity-75">
-            {`I’m a huge fan of all sports and love to stay active in my free time. I’m also very passionate about education accessibility and equity.`}
-          </p>
-        </div>
+        {isDesktop && (
+          <div>
+            <p className="text-white opacity-75 max-w-[500px]">
+              {`I’m a huge fan of all sports and love to stay active in my free time. I’m also very passionate about education accessibility and equity.`}
+            </p>
+          </div>
+        )}
         <Contact />
       </div>
       <div className="flex flex-col w-1/2 justify-center lg:items-center md:items-end">
