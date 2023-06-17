@@ -9,7 +9,11 @@ const Experience = () => {
         Experience
       </p>
       <div className="flex mb-8">
-        <a href="VishruthRajResume.pdf" download className="flex">
+        <a
+          href="VishruthRajResume.pdf"
+          download
+          className="flex border-b-2 border-backgroundBlack hover:border-white"
+        >
           <p className="text-white font-medium pr-2">Resume</p>
           <AiOutlineDownload color="white" size={20} />
         </a>
