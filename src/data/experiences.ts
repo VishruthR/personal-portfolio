@@ -22,7 +22,7 @@ export const experiences = [
     position: "AI Engineering Intern",
     year: "2022",
     description:
-      "Spearheaded research, testing, and deployment of multiple cutting-edge summarization models, delivering substantial productivity gains.",
+      "Spearheaded an innovative summarization algorithm, achieving a 2,000% speedup in summary generation while performing on par with state of the art models.",
     link: "https://www.sorcero.com/",
     skills: ["Python", "PyTorch", "Tensorflow"],
   },

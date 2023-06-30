@@ -57,17 +57,19 @@ export const SingleExperience = ({ experience }: SingleExperienceProps) => {
 
   return (
     <a href={experience.link} target="_blank">
-      <div className="border-2 h-full border-backgroundBlack hover:bg-white hover:bg-opacity-10 hover:border-white hover:border-opacity-30 rounded-md space-y-4 p-3">
-        <div className="flex items-center">
-          <p className="text-white font-bold mr-2 leading-none">
-            {experience.name}
+      <div className="flex flex-col justify-between border-2 h-full border-backgroundBlack hover:bg-white hover:bg-opacity-10 hover:border-white hover:border-opacity-30 rounded-md space-y-4 p-3">
+        <div className="space-y-4">
+          <div className="flex items-center">
+            <p className="text-white font-bold mr-2 leading-none">
+              {experience.name}
+            </p>
+            <BsArrowUpRight color="white" size={20} />
+          </div>
+          <p className="text-white text-sm">
+            {experience.year} • {experience.position}
           </p>
-          <BsArrowUpRight color="white" size={20} />
+          <p className="text-white">{experience.description}</p>
         </div>
-        <p className="text-white text-sm">
-          {experience.year} • {experience.position}
-        </p>
-        <p className="text-white">{experience.description}</p>
         <div className="flex flex-wrap space-x-2">
           {experience.skills.map((skill) => (
             <Pill
