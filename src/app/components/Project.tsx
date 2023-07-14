@@ -52,7 +52,10 @@ export const Project = ({ project }: ProjectProps) => {
           </div>
         )}
         <div className="space-y-4">
-          <div className="flex items-center" onClick={toggleExpanded}>
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={toggleExpanded}
+          >
             <p className="text-white font-bold mr-2 leading-none">
               {project.name}
             </p>
