@@ -1,3 +1,3 @@
 My personal portfolio
 
-[vishruthraj.com](vishruthraj.com)
+[vishruthraj.com](https://www.vishruthraj.com/)
