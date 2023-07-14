@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { BREAKPOINTS } from "@/data/utils";
+import { useState } from "react";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import { BiSolidChevronRight, BiSolidChevronDown } from "react-icons/bi";
 import { useBreakpoint } from "use-breakpoint";
 
 interface Project {
   name: string;
+  sentence: string;
   description: string;
   live: string | null;
   github: string | null;
@@ -19,13 +22,29 @@ interface ProjectProps {
 
 export const Project = ({ project }: ProjectProps) => {
   const { breakpoint } = useBreakpoint(BREAKPOINTS);
+  const [expanded, setExpanded] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
   const isMobile = breakpoint === "mobile";
+
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+
+    const timeout = expanded ? 20 : 100;
+
+    setTimeout(() => {
+      setShowDescription(!showDescription);
+    }, timeout);
+  };
 
   return (
     <div className="flex flex-col justify-between bg-darkGray rounded-md max-w-[350px] w-full h-full pt-3">
       <div className="space-y-4 px-3">
         {project.screenshot && (
-          <div className="max-w-[350px] max-h-[200px] overflow-hidden rounded-md">
+          <div
+            className={`max-w-[350px] max-h-[200px] overflow-hidden rounded-md transition-all ease-in-out duration-200 ${
+              expanded ? "h-0" : "h-[180px]"
+            }`}
+          >
             <img
               src={project.screenshot}
               alt={`Project ${project.name} screenshot`}
@@ -33,13 +52,26 @@ export const Project = ({ project }: ProjectProps) => {
           </div>
         )}
         <div className="space-y-4">
-          <p className="text-white font-bold mr-2 leading-none">
-            {project.name}
+          <div className="flex items-center" onClick={toggleExpanded}>
+            <p className="text-white font-bold mr-2 leading-none">
+              {project.name}
+            </p>
+            {expanded ? (
+              <BiSolidChevronDown color="white" />
+            ) : (
+              <BiSolidChevronRight color="white" />
+            )}
+          </div>
+          <p
+            className={`text-white transition-all ease-in-out duration-200 ${
+              expanded ? "h-[200px]" : "h-6"
+            }`}
+          >
+            {showDescription ? project.description : project.sentence}
           </p>
-          <p className="text-white">{project.description}</p>
         </div>
       </div>
-      <div className="space-y-4 p-3">
+      <div className="p-3">
         <div className="flex justify-between items-center">
           <div className="flex flex-wrap space-x-2">
             {project.skills.map((skill, i) => (
