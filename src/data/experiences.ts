@@ -1,6 +1,15 @@
 export const experiences = [
   {
-    name: "Meraki Foundation",
+    name: "GrammaTech",
+    position: "Software Engineering Intern",
+    year: "2023",
+    description:
+      "Optimized Python code and Docker containers, achieveing an 80% reduction in CPU usage and a 70% reduction in package size.",
+    link: "https://www.grammatech.com/",
+    skills: ["Python", "Docker", "CI/CD"],
+  },
+  {
+    name: "Hack4ImpactMeraki Foundation",
     position: "Software Developer",
     year: "2023",
     description:
@@ -9,13 +18,13 @@ export const experiences = [
     skills: ["React", "PostgreSQL", "NextJS"],
   },
   {
-    name: "VoyceMe",
-    position: "Product Engineering Intern",
-    year: "2023",
+    name: "Hack4Impact: Kadakareer",
+    position: "Software Developer",
+    year: "2022",
     description:
-      "Engineered a social networking platform, seamlessly connecting authors and users, fostering a vibrant community for content creators.",
-    link: "https://www.voyce.me/",
-    skills: ["React", "TailwindCSS", "GraphQL"],
+      "Developed an online education platform, enabling 100+ underserved Filipino youth to gain valuable career experience.",
+    link: "https://www.kadakareer.com/",
+    skills: ["React", "NestJS", "Firebase"],
   },
   {
     name: "Sorcero",
@@ -25,14 +34,5 @@ export const experiences = [
       "Spearheaded an innovative summarization algorithm, achieving a 2,000% speedup in summary generation while performing on par with state of the art models.",
     link: "https://www.sorcero.com/",
     skills: ["Python", "PyTorch", "Tensorflow"],
-  },
-  {
-    name: "University of Wisconsin - Green Bay",
-    position: "Research Intern",
-    year: "2021",
-    description:
-      "Researched and pioneered an automated weather forecasting system incorporating natural language generation.",
-    link: "https://www.uwgb.edu/",
-    skills: ["PyTorch", "Tensorflow", "Research"],
   },
 ];

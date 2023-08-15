@@ -30,13 +30,23 @@ export const projects = [
     skills: ["Python", "NLP", "PyTorch", "DevOps"],
   },
   {
-    name: "Kadakareer",
-    sentence: "Empowering Filipino youth in their careers.",
+    name: "Material UI",
+    sentence: "Open source contributor",
     description:
-      "Built the Virtual Apprenticeship program as part of Kadakareer's mission. This program allows users to work through 4-6 week long guided internships hosted by real companies. It allows underserved Fillipino youth to gain valuable career experience.",
-    live: "https://app.kadakareer.com/",
+      "Material UI is one of the largest React UI libraries. I contributed PRs to gain familiarity with building modularizable components and the FOSS contribution system.",
+    live: "https://mui.com/",
+    github: "https://github.com/mui",
+    screenshot: "mui.png",
+    skills: ["React", "Typescript", "CSS", "FOSS"],
+  },
+  {
+    name: "VoyceMe",
+    sentence: "Reinventing the webcomic experience.",
+    description:
+      "VoyceMe aims to allow webcomic authors and readers to connect in a new way. I worked as a developer on this project to implement a feed which allows readers to follow and interact with their favorite authors.",
+    live: "https://www.voyce.me/plaza",
     github: null,
-    screenshot: "Kadakareer.png",
-    skills: ["TailwindCSS", "Firebase", "React"],
+    screenshot: "voyceme.png",
+    skills: ["React", "TailwindCSS", "GraphQL"],
   },
 ];
