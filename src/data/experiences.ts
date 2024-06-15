@@ -1,5 +1,14 @@
 export const experiences = [
   {
+    name: "Hack4Impact: InclusiveStem",
+    position: "Technical Lead",
+    year: "2024",
+    description:
+      "Built a platform aiming to become the world’s largest online library for accessible information in the world.",
+    link: "http://www.inclusivestem.org/",
+    skills: ["Typescript", "AWS", "MongoDB"],
+  },
+  {
     name: "GrammaTech",
     position: "Software Engineering Intern",
     year: "2023",
@@ -9,22 +18,13 @@ export const experiences = [
     skills: ["Python", "Docker", "CI/CD"],
   },
   {
-    name: "Hack4ImpactMeraki Foundation",
+    name: "Hack4Impact: Meraki Foundation",
     position: "Software Developer",
     year: "2023",
     description:
       "Built a powerful data visualization platform which empowered government officials to effectively assess and enhance more than 20,000 preschools.",
     link: "https://merakifoundation.in/",
     skills: ["React", "PostgreSQL", "NextJS"],
-  },
-  {
-    name: "Hack4Impact: Kadakareer",
-    position: "Software Developer",
-    year: "2022",
-    description:
-      "Developed an online education platform, enabling 100+ underserved Filipino youth to gain valuable career experience.",
-    link: "https://www.kadakareer.com/",
-    skills: ["React", "NestJS", "Firebase"],
   },
   {
     name: "Sorcero",
