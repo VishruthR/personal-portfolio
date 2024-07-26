@@ -1,5 +1,14 @@
 export const experiences = [
   {
+    name: "Klaviyo",
+    position: "Software Engineering Intern",
+    year: "2024",
+    description:
+      "Deployed a microservice capable of a throughput of 2.5 million messages and extended its functionality to reduce data loss by 20%.",
+    link: "https://www.klaviyo.com/",
+    skills: ["AWS", "Kubernetes", "Python"],
+  },
+  {
     name: "Hack4Impact: InclusiveStem",
     position: "Technical Lead",
     year: "2024",
@@ -25,14 +34,5 @@ export const experiences = [
       "Built a powerful data visualization platform which empowered government officials to effectively assess and enhance more than 20,000 preschools.",
     link: "https://merakifoundation.in/",
     skills: ["React", "PostgreSQL", "NextJS"],
-  },
-  {
-    name: "Sorcero",
-    position: "AI Engineering Intern",
-    year: "2022",
-    description:
-      "Spearheaded an innovative summarization algorithm, achieving a 2,000% speedup in summary generation while performing on par with state of the art models.",
-    link: "https://www.sorcero.com/",
-    skills: ["Python", "PyTorch", "Tensorflow"],
   },
 ];
