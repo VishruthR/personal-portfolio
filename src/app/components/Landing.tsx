@@ -69,7 +69,7 @@ const Landing = () => {
         </div>
         <div>
           <p className="text-white opacity-75 max-w-[500px]">
-            {`I’m currently interning as a software developer @ GrammaTech and volunteering as a software developer @ Hack4Impact.`}
+            {`I'm currently volunteering as a software developer @ Hack4Impact and recently interned @ Klaviyo this past summer.`}
           </p>
         </div>
         {isDesktop && (
