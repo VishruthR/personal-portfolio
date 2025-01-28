@@ -35,7 +35,11 @@ const Landing = () => {
         <Contact />
         <div className="flex flex-col w-full justify-center lg:items-center items-center md:items-end">
           <div className="max-w-[360px] max-h-[360px] w-11/12 h-11/12 rounded-full overflow-hidden mb-4">
-            <img src="/headshot.png" alt="Headshot" className="w-full h-full" />
+            <img
+              src="/headshot_new.png"
+              alt="Headshot"
+              className="w-full h-full"
+            />
           </div>
           <div className="flex lg:w-7/12 md:w-9/12 flex-wrap justify-center space-x-2">
             {skills.map((skill) => (
@@ -83,7 +87,11 @@ const Landing = () => {
       </div>
       <div className="flex flex-col w-1/2 justify-center lg:items-center md:items-end">
         <div className="lg:w-7/12 lg:h-9/12  md:w-9/12 md:h-11/12 rounded-full overflow-hidden mb-4">
-          <img src="/headshot.png" alt="Headshot" className="w-full h-full" />
+          <img
+            src="/headshot_new.png"
+            alt="Headshot"
+            className="w-full h-full"
+          />
         </div>
         <div className="flex lg:w-7/12 md:w-9/12 flex-wrap justify-center space-x-2">
           {skills.map((skill) => (
