@@ -1,5 +1,15 @@
 export const projects = [
   {
+    name: "Polychaeata",
+    sentence: "Optimizing sustainable aquaculture.",
+    description:
+      "Polychaeta supports farmers in raising their own sustainable and green marine works. I worked as the sole developer to build an always-on monitoring and alerting platform capable of monitoring 500+ sensors, deployed for under $25/month.",
+    live: null,
+    github: null,
+    screenshot: "Polychaeta.png",
+    skills: ["Postgres", "Grafana", "AWS"],
+  },
+  {
     name: "Epicenter",
     sentence: "Disaster relief reimagined.",
     description:
@@ -48,5 +58,16 @@ export const projects = [
     github: null,
     screenshot: "voyceme.png",
     skills: ["React", "TailwindCSS", "GraphQL"],
+  },
+  {
+    name: "InclusiveStem",
+    sentence:
+      "Building the world's largest online library for accessible information.",
+    description:
+      "I led a team of 5 developers to build a platform aiming to become the world's largest online library for accessible information.",
+    live: null,
+    github: null,
+    screenshot: "inclusivestem.png",
+    skills: ["Typescript", "AWS", "MongoDB"],
   },
 ];

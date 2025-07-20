@@ -24,13 +24,7 @@ const Landing = () => {
           <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
         </div>
         <div>
-          <p className="text-white font-bold">CS + Linguistics @ UIUC</p>
-        </div>
-        <div>
-          <p className="text-white opacity-75">
-            {`I'm a student passionate about creating technology to improve
-          people's lives`}
-          </p>
+          <p className="text-white font-bold">CS @ UIUC</p>
         </div>
         <Contact />
         <div className="flex flex-col w-full justify-center lg:items-center items-center md:items-end">
@@ -40,11 +34,6 @@ const Landing = () => {
               alt="Headshot"
               className="w-full h-full"
             />
-          </div>
-          <div className="flex lg:w-7/12 md:w-9/12 flex-wrap justify-center space-x-2">
-            {skills.map((skill) => (
-              <Pill key={`pill-${skill}`} text={skill} />
-            ))}
           </div>
         </div>
       </div>
@@ -61,19 +50,13 @@ const Landing = () => {
           </div>
           <div>
             <p className="text-white font-bold text-lg opacity-90 mt-3">
-              CS + Linguistics @ UIUC
+              CS @ UIUC
             </p>
           </div>
         </div>
         <div>
           <p className="text-white opacity-75 max-w-[500px]">
-            {`I'm a student passionate about creating technology to improve
-            people's lives`}
-          </p>
-        </div>
-        <div>
-          <p className="text-white opacity-75 max-w-[500px]">
-            {`I'm currently volunteering as a software developer @ Hack4Impact and recently interned @ Klaviyo this past summer.`}
+            {`I'm currently pursuing a Professional Master's in Computer Science at UIUC. In the past, I've been a technical lead @ Hack4Impact and a SWE intern @ Roblox and Klaviyo.`}
           </p>
         </div>
         {isDesktop && (
