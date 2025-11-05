@@ -10,36 +10,6 @@ export const projects = [
     skills: ["Postgres", "Grafana", "AWS"],
   },
   {
-    name: "Epicenter",
-    sentence: "Disaster relief reimagined.",
-    description:
-      "Epicenter is a hub for government officials to manage disasters. They can mark disaster zones on a map, track whether people are safe, and announce alerts. Users can use the mobile app to be notified of emergencies in their area and mark themselves as safe. Built for HackIllinois 2023.",
-    live: "https://epicenter.vercel.app/",
-    github: "https://github.com/pguduguntla/epicenter-web",
-    screenshot: "epicenter.png",
-    skills: ["TailwindCSS", "Firebase", "React"],
-  },
-  {
-    name: "VacayFinder",
-    sentence: "Vacation planning simplified.",
-    description:
-      "Vacay Finder is a website that guides users to their perfect travel destination. Vacay Finder has a user choose between cities they have enjoyed visiting or would like to visit and, using the selections of the user, predicts cities for their future travel plans!",
-    live: "https://vacayfinder.vercel.app/",
-    github: "https://github.com/VishruthR/vacay-finder",
-    screenshot: "vacayfinder.png",
-    skills: ["React", "Flask", "MongoDB"],
-  },
-  {
-    name: "RateADraftee",
-    sentence: "Rate an NFL player using the power of AI!",
-    description:
-      "RateADraftee allows a user to search up any NFL player drafted since 2017 and get an A-F rating of that player. It works by scraping twitter for tweets about that player, then uses a fine-tuned LLM to analyze the tweets for positive or negative sentiment.",
-    live: null,
-    github: "https://github.com/VishruthR/RateADraftee",
-    screenshot: "rateadraftee.png",
-    skills: ["Python", "NLP", "PyTorch", "DevOps"],
-  },
-  {
     name: "Material UI",
     sentence: "Open source contributor",
     description:
@@ -58,6 +28,46 @@ export const projects = [
     github: null,
     screenshot: "voyceme.png",
     skills: ["React", "TailwindCSS", "GraphQL"],
+  },
+  {
+    name: "VacayFinder",
+    sentence: "Vacation planning simplified.",
+    description:
+      "Vacay Finder is a website that guides users to their perfect travel destination. Vacay Finder has a user choose between cities they have enjoyed visiting or would like to visit and, using the selections of the user, predicts cities for their future travel plans!",
+    live: "https://vacayfinder.vercel.app/",
+    github: "https://github.com/VishruthR/vacay-finder",
+    screenshot: "vacayfinder.png",
+    skills: ["React", "Flask", "MongoDB"],
+  },
+  {
+    name: "Poker Practice",
+    sentence: "To beat my friends",
+    description:
+      "I play poker with my nerdy math friends, so I usually walk out having lost money. I vibe-coded this web app to help me practice poker calculations so that I could win my money back.",
+    live: "https://poker-practice-iota.vercel.app/",
+    github: "https://github.com/VishruthR/poker-practice/tree/main",
+    screenshot: "poker-practice.png",
+    skills: ["Cursor", "NextJS", "TailwindCSS"],
+  },
+  {
+    name: "Epicenter",
+    sentence: "Disaster relief reimagined.",
+    description:
+      "Epicenter is a hub for government officials to manage disasters. They can mark disaster zones on a map, track whether people are safe, and announce alerts. Users can use the mobile app to be notified of emergencies in their area and mark themselves as safe. Built for HackIllinois 2023.",
+    live: "https://epicenter.vercel.app/",
+    github: "https://github.com/pguduguntla/epicenter-web",
+    screenshot: "epicenter.png",
+    skills: ["TailwindCSS", "Firebase", "React"],
+  },
+  {
+    name: "RateADraftee",
+    sentence: "Rate an NFL player using the power of AI!",
+    description:
+      "RateADraftee allows a user to search up any NFL player drafted since 2017 and get an A-F rating of that player. It works by scraping twitter for tweets about that player, then uses a fine-tuned LLM to analyze the tweets for positive or negative sentiment.",
+    live: null,
+    github: "https://github.com/VishruthR/RateADraftee",
+    screenshot: "rateadraftee.png",
+    skills: ["Python", "NLP", "PyTorch", "DevOps"],
   },
   {
     name: "InclusiveStem",
