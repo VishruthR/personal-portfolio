@@ -1,85 +1,63 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-import { useBreakpoint } from "use-breakpoint";
-import { BREAKPOINTS, skills } from "../../data/utils";
-import Contact from "./Contact";
-import Pill from "./Pill";
 import { useHydrated } from "@/hooks/useHydrated";
 
 const Landing = () => {
   const hydrated = useHydrated();
-  const { breakpoint } = useBreakpoint(BREAKPOINTS);
-  const isMobile = breakpoint === "mobile";
-  const isDesktop = breakpoint === "desktop";
 
   if (!hydrated) {
     return null;
   }
 
-  if (isMobile) {
-    return (
-      <div className="flex flex-col w-full py-10 mb-8 space-y-2" id="landing">
-        <div>
-          <p className="text-white font-bold mg:text-5xl md:text-4xl sm:text-4xl">{`Vishruth Raj`}</p>
-        </div>
-        <div>
-          <p className="text-white font-bold">CS @ UIUC</p>
-        </div>
-        <Contact />
-        <div className="flex flex-col w-full justify-center lg:items-center items-center md:items-end">
-          <div className="max-w-[360px] max-h-[360px] w-11/12 h-11/12 rounded-full overflow-hidden mb-4">
-            <img
-              src="/headshot_new.png"
-              alt="Headshot"
-              className="w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="flex w-full py-10 mb-8" id="landing">
-      <div className="flex flex-col w-1/2 justify-around">
-        <div>
-          <div>
-            <p className="text-white font-bold mg:text-5xl md:text-4xl">Hi,</p>
-            <p className="text-white font-bold mg:text-5xl md:text-4xl">{`I'm Vishruth Raj`}</p>
-          </div>
-          <div>
-            <p className="text-white font-bold text-lg opacity-90 mt-3">
-              CS @ UIUC
-            </p>
-          </div>
-        </div>
-        <div>
-          <p className="text-white opacity-75 max-w-[500px]">
-            {`I'm currently pursuing a Professional Master's in Computer Science at UIUC. In the past, I've been a technical lead @ Hack4Impact and a SWE intern @ Roblox and Klaviyo.`}
+    <div
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[20vh]"
+      id="landing"
+    >
+      <div className="flex flex-col max-w-2xl space-y-12">
+        <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal text-brown whitespace-nowrap">
+          Hey, I'm Vishruth
+        </h1>
+
+        <div className="flex flex-col space-y-4 text-brownMuted text-base md:text-lg leading-relaxed font-playfair">
+          <p>
+            I'm a master's student studying computer science at the University
+            of Illinois - Urbana Champaign. I've previously worked at Roblox,
+            Klaviyo, and Hack4Impact UIUC primarily in data and infrastructure.
           </p>
-        </div>
-        {isDesktop && (
-          <div>
-            <p className="text-white opacity-75 max-w-[500px]">
-              {`I’m a huge fan of all sports and love to stay active in my free time. I’m also very passionate about education accessibility and equity.`}
-            </p>
-          </div>
-        )}
-        <Contact />
-      </div>
-      <div className="flex flex-col w-1/2 justify-center lg:items-center md:items-end">
-        <div className="lg:w-7/12 lg:h-9/12  md:w-9/12 md:h-11/12 rounded-full overflow-hidden mb-4">
-          <img
-            src="/headshot_new.png"
-            alt="Headshot"
-            className="w-full h-full"
-          />
-        </div>
-        <div className="flex lg:w-7/12 md:w-9/12 flex-wrap justify-center space-x-2">
-          {skills.map((skill) => (
-            <Pill key={`pill-${skill}`} text={skill} />
-          ))}
+
+          <p className="font-playfair">
+            If you want to learn more about my professional experience, my
+            resume is{" "}
+            <a
+              href="/VishruthRajResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brownDark transition-colors"
+            >
+              here
+            </a>
+          </p>
+
+          <p className="font-playfair">
+            Check out more about me{" "}
+            <a
+              href="/about"
+              className="underline hover:text-brownDark transition-colors"
+            >
+              here
+            </a>
+          </p>
+
+          <p className="font-playfair">
+            HMU at{" "}
+            <a
+              href="mailto:vishraj248@gmail.com"
+              className="underline hover:text-brownDark transition-colors"
+            >
+              vishraj248@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     </div>

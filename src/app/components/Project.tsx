@@ -1,10 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
 
-import { BREAKPOINTS } from "@/data/utils";
 import { useState } from "react";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { BiSolidChevronRight, BiSolidChevronDown } from "react-icons/bi";
-import { useBreakpoint } from "use-breakpoint";
 
 interface Project {
   name: string;
@@ -14,6 +12,7 @@ interface Project {
   github: string | null;
   screenshot: string;
   skills: string[];
+  year: string;
 }
 
 interface ProjectProps {
@@ -21,10 +20,8 @@ interface ProjectProps {
 }
 
 export const Project = ({ project }: ProjectProps) => {
-  const { breakpoint } = useBreakpoint(BREAKPOINTS);
   const [expanded, setExpanded] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
-  const isMobile = breakpoint === "mobile";
 
   const toggleExpanded = () => {
     setExpanded(!expanded);
@@ -37,68 +34,65 @@ export const Project = ({ project }: ProjectProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-darkGray rounded-md max-w-[350px] w-full h-full pt-3">
-      <div className="space-y-4 px-3">
-        {project.screenshot && (
-          <div
-            className={`max-w-[350px] max-h-[200px] overflow-hidden rounded-md transition-all ease-in-out duration-200 ${
-              expanded ? "h-0" : "h-[180px]"
-            }`}
-          >
+    <div className="flex flex-col justify-between bg-projectBg rounded-lg w-full h-full">
+      {project.screenshot && (
+        <div
+          className={`w-full overflow-hidden transition-all ease-in-out duration-200 ${
+            expanded ? "h-0" : "h-[66.67%]"
+          }`}
+        >
+          {!expanded && (
             <img
-              src={project.screenshot}
+              src={`/${project.screenshot}`}
               alt={`Project ${project.name} screenshot`}
+              className="w-full h-full object-cover"
             />
-          </div>
-        )}
+          )}
+        </div>
+      )}
+      <div className="flex flex-col flex-1 justify-between px-3 pt-3 pb-3">
         <div className="space-y-4">
           <div
             className="flex items-center cursor-pointer"
             onClick={toggleExpanded}
           >
-            <p className="text-white font-bold mr-2 leading-none">
+            <p className="text-brown mr-2 leading-none">
               {project.name}
             </p>
             {expanded ? (
-              <BiSolidChevronDown color="white" />
+              <BiSolidChevronDown className="text-brown" size={20} />
             ) : (
-              <BiSolidChevronRight color="white" />
+              <BiSolidChevronRight className="text-brown" size={20} />
             )}
           </div>
           <p
-            className={`text-white transition-all ease-in-out duration-200 ${
+            className={`text-brownMuted transition-all ease-in-out duration-200 font-inter ${
               expanded ? "h-[200px]" : "h-6"
             }`}
           >
             {showDescription ? project.description : project.sentence}
           </p>
         </div>
-      </div>
-      <div className="p-3">
-        <div className="flex justify-between items-center">
-          <div className="flex flex-wrap space-x-2">
-            {project.skills.map((skill, i) => (
-              <p
-                className="text-sm text-white opacity-50"
-                key={`${project.name}-skill-${skill}`}
-              >
-                {`${skill}${i < project.skills.length - 1 ? ` • ` : ""}`}
-              </p>
-            ))}
-          </div>
+        <div className="flex justify-end items-center pt-2">
           <div className="flex space-x-3">
             {project.live && (
-              <a href={project.live} target="_blank">
-                <div className="flex w-fit leading-none pb-1 my-1 items-center">
-                  <AiOutlineLink className="mr-2" color="white" size={26} />
-                </div>
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <AiOutlineLink className="text-brown" size={24} />
               </a>
             )}
             {project.github && (
-              <a href={project.github} target="_blank">
-                <div className="flex w-fit leading-none pb-1 my-1 items-center">
-                  <AiFillGithub className="mr-2" color="white" size={26} />
-                </div>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <AiFillGithub className="text-brown" size={24} />
               </a>
             )}
           </div>

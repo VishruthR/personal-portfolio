@@ -1,0 +1,5 @@
+- [ ] add footer
+- [ ] projects page
+- [ ] improve link underline design
+- [ ] Add recipe links
+- [ ] make bullet points cooler

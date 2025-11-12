@@ -8,6 +8,7 @@ export const projects = [
     github: null,
     screenshot: "Polychaeta.png",
     skills: ["Postgres", "Grafana", "AWS"],
+    year: "2025",
   },
   {
     name: "Material UI",
@@ -18,6 +19,7 @@ export const projects = [
     github: "https://github.com/mui",
     screenshot: "mui.png",
     skills: ["React", "Typescript", "CSS", "FOSS"],
+    year: "2023",
   },
   {
     name: "VoyceMe",
@@ -28,6 +30,7 @@ export const projects = [
     github: null,
     screenshot: "voyceme.png",
     skills: ["React", "TailwindCSS", "GraphQL"],
+    year: "2023",
   },
   {
     name: "VacayFinder",
@@ -38,6 +41,7 @@ export const projects = [
     github: "https://github.com/VishruthR/vacay-finder",
     screenshot: "vacayfinder.png",
     skills: ["React", "Flask", "MongoDB"],
+    year: "2023",
   },
   {
     name: "Poker Practice",
@@ -48,6 +52,7 @@ export const projects = [
     github: "https://github.com/VishruthR/poker-practice/tree/main",
     screenshot: "poker-practice.png",
     skills: ["Cursor", "NextJS", "TailwindCSS"],
+    year: "2025",
   },
   {
     name: "Epicenter",
@@ -58,6 +63,7 @@ export const projects = [
     github: "https://github.com/pguduguntla/epicenter-web",
     screenshot: "epicenter.png",
     skills: ["TailwindCSS", "Firebase", "React"],
+    year: "2023",
   },
   {
     name: "RateADraftee",
@@ -68,6 +74,7 @@ export const projects = [
     github: "https://github.com/VishruthR/RateADraftee",
     screenshot: "rateadraftee.png",
     skills: ["Python", "NLP", "PyTorch", "DevOps"],
+    year: "2022",
   },
   {
     name: "InclusiveStem",
@@ -79,5 +86,6 @@ export const projects = [
     github: null,
     screenshot: "inclusivestem.png",
     skills: ["Typescript", "AWS", "MongoDB"],
+    year: "2024",
   },
 ];
