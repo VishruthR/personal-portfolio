@@ -34,7 +34,7 @@ const AboutMe = () => {
           <p>
             I'm always trying to work on something on the side (technical or otherwise). You can check out some of my projects{" "}
             <a
-              href="#projects"
+              href="/projects"
               className="underline hover:text-brownDark transition-colors"
             >
               here

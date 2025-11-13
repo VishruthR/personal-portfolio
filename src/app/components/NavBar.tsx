@@ -4,6 +4,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useHydrated } from "@/hooks/useHydrated";
+import { motion } from "framer-motion";
 import { HiHome } from "react-icons/hi";
 import { HiUser } from "react-icons/hi";
 import { HiWrenchScrewdriver } from "react-icons/hi2";
@@ -41,8 +42,8 @@ const NavBar = () => {
   }
 
   return (
-    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full bg-beige pt-6 pb-4">
-      <div className="flex gap-3">
+    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full pt-12 pb-4">
+      <div className="relative flex gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2">
         {navbarItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.path;
@@ -50,19 +51,20 @@ const NavBar = () => {
             <Link
               key={`navbar-item-${item.path}-${item.name}`}
               href={item.path}
-              className={`
-                flex items-center justify-center
-                w-14 h-10
-                rounded-lg
-                transition-all duration-200
-                ${
-                  isActive
-                    ? "bg-brownDark text-beige"
-                    : "bg-brownLight text-brown hover:bg-brown hover:text-beige"
-                }
-              `}
+              className="relative flex items-center justify-center w-12 h-10 px-2 rounded-lg z-10"
             >
-              <Icon size={20} />
+              {isActive && (
+                <motion.div
+                  layoutId="activeIndicator"
+                  className="absolute inset-0 bg-[#FEFEFE] rounded-lg"
+                  transition={{
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 30,
+                  }}
+                />
+              )}
+              <Icon size={24} className="relative z-10 text-[#CCB7A6]" />
             </Link>
           );
         })}

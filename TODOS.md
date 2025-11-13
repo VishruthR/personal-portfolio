@@ -3,3 +3,5 @@
 - [ ] improve link underline design
 - [ ] Add recipe links
 - [ ] make bullet points cooler
+- [ ] navbar
+- [ ] experiment with gridlines
