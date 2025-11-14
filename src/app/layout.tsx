@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -20,7 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>{children}</body>
+      <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>
+        <div className="w-full h-full min-h-screen">
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

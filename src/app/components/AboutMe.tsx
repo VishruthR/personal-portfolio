@@ -19,7 +19,7 @@ const AboutMe = () => {
 
         <div className="flex flex-col space-y-6 text-brownMuted text-base md:text-lg leading-relaxed w-full text-left font-playfair">
           <p>
-            I've been coding professionally for [code] and unprofessionally for [code].
+            I learned how to write code in high school and am now working as a software engineer.
           </p>
 
           <div className="space-y-3">

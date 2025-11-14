@@ -5,3 +5,4 @@
 - [ ] make bullet points cooler
 - [ ] navbar
 - [ ] experiment with gridlines
+- [ ] Improve projects cards + page layout

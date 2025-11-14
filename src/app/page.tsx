@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import { Analytics } from "@vercel/analytics/react";
 import { useHydrated } from "@/hooks/useHydrated";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const hydrated = useHydrated();
@@ -18,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-beige w-full h-full min-h-screen">
+    <div className="bg-beige w-full h-full">
       <NavBar />
       <div className="w-full md:px-16 sm:px-3">
         <Landing />
