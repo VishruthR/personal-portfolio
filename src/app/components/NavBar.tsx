@@ -42,8 +42,8 @@ const NavBar = () => {
   }
 
   return (
-    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full pt-12 pb-4">
-      <div className="relative flex gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2">
+    <div className="fixed left-12 top-0 h-full z-[2000] flex items-center pl-6">
+      <div className="relative flex flex-col gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2">
         {navbarItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.path;
@@ -51,7 +51,7 @@ const NavBar = () => {
             <Link
               key={`navbar-item-${item.path}-${item.name}`}
               href={item.path}
-              className="relative flex items-center justify-center w-12 h-10 px-2 rounded-lg z-10"
+              className="relative flex items-center justify-center w-12 h-12 px-2 rounded-lg z-10"
             >
               {isActive && (
                 <motion.div

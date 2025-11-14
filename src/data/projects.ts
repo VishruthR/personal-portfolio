@@ -1,9 +1,20 @@
 export const projects = [
   {
+    name: "Poker Practice",
+    sentence: "To beat my friends",
+    description:
+      "I play poker with my nerdy math friends, so I usually walk out having lost money. I vibe-coded this web app to help me practice poker calculations so that I could win my money back.",
+    live: "https://poker-practice-iota.vercel.app/",
+    github: "https://github.com/VishruthR/poker-practice/tree/main",
+    screenshot: "poker-practice.png",
+    skills: ["Cursor", "NextJS", "TailwindCSS"],
+    year: "2025",
+  },
+  {
     name: "Polychaeata",
     sentence: "Optimizing sustainable aquaculture.",
     description:
-      "Polychaeta supports farmers in raising their own sustainable and green marine works. I worked as the sole developer to build an always-on monitoring and alerting platform capable of monitoring 500+ sensors, deployed for under $25/month.",
+      "Polychaeta supports farmers in raising their own sustainable and green marine worms. I built an always-on monitoring and alerting platform capable of monitoring 500+ sensors, deployed for under $25/month.",
     live: null,
     github: null,
     screenshot: "Polychaeta.png",
@@ -44,17 +55,6 @@ export const projects = [
     year: "2023",
   },
   {
-    name: "Poker Practice",
-    sentence: "To beat my friends",
-    description:
-      "I play poker with my nerdy math friends, so I usually walk out having lost money. I vibe-coded this web app to help me practice poker calculations so that I could win my money back.",
-    live: "https://poker-practice-iota.vercel.app/",
-    github: "https://github.com/VishruthR/poker-practice/tree/main",
-    screenshot: "poker-practice.png",
-    skills: ["Cursor", "NextJS", "TailwindCSS"],
-    year: "2025",
-  },
-  {
     name: "Epicenter",
     sentence: "Disaster relief reimagined.",
     description:
@@ -79,7 +79,7 @@ export const projects = [
   {
     name: "InclusiveStem",
     sentence:
-      "Building the world's largest online library for accessible information.",
+      "The world's largest online library for accessible information.",
     description:
       "I led a team of 5 developers to build a platform aiming to become the world's largest online library for accessible information.",
     live: null,

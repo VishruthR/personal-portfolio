@@ -1,6 +1,7 @@
 "use client";
 
 import { useHydrated } from "@/hooks/useHydrated";
+import Link from "next/link";
 
 const Landing = () => {
   const hydrated = useHydrated();
@@ -11,7 +12,7 @@ const Landing = () => {
 
   return (
     <div
-      className="flex flex-col items-center w-full min-h-screen px-6 pt-[20vh]"
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[15vh]"
       id="landing"
     >
       <div className="flex flex-col max-w-2xl space-y-12">
@@ -41,12 +42,12 @@ const Landing = () => {
 
           <p className="font-playfair">
             Check out more about me{" "}
-            <a
+            <Link
               href="/about"
               className="underline hover:text-brownDark transition-colors"
             >
               here
-            </a>
+            </Link>
           </p>
 
           <p className="font-playfair">

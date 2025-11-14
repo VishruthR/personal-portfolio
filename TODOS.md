@@ -1,8 +1,7 @@
-- [ ] add footer
-- [ ] projects page
 - [ ] improve link underline design
 - [ ] Add recipe links
 - [ ] make bullet points cooler
-- [ ] navbar
 - [ ] experiment with gridlines
 - [ ] Improve projects cards + page layout
+- [ ] make your website look less like a copy
+- [ ] Adjust pages to not start so close to the top

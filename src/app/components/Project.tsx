@@ -34,11 +34,11 @@ export const Project = ({ project }: ProjectProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-projectBg rounded-lg w-full h-full">
+    <div className="flex flex-col justify-between bg-projectBg rounded-lg w-[300px] h-[250px]">
       {project.screenshot && (
         <div
-          className={`w-full overflow-hidden transition-all ease-in-out duration-200 ${
-            expanded ? "h-0" : "h-[66.67%]"
+          className={`w-full overflow-hidden transition-all ease-in-out rounded-t-lg duration-200 ${
+            expanded ? "h-0" : "h-[65%]"
           }`}
         >
           {!expanded && (
@@ -51,7 +51,7 @@ export const Project = ({ project }: ProjectProps) => {
         </div>
       )}
       <div className="flex flex-col flex-1 justify-between px-3 pt-3 pb-3">
-        <div className="space-y-4">
+        <div className="space-y-2">
           <div
             className="flex items-center cursor-pointer"
             onClick={toggleExpanded}
@@ -66,8 +66,8 @@ export const Project = ({ project }: ProjectProps) => {
             )}
           </div>
           <p
-            className={`text-brownMuted transition-all ease-in-out duration-200 font-inter ${
-              expanded ? "h-[200px]" : "h-6"
+            className={`text-brownMuted text-sm transition-all ease-in-out duration-200 font-inter ${
+              expanded ? "h-full" : "h-[35%]"
             }`}
           >
             {showDescription ? project.description : project.sentence}

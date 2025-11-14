@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const AboutMe = () => {
   return (
     <div
-      className="flex flex-col items-center w-full min-h-screen px-6 pt-[15vh]"
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[10vh]"
       id="about"
     >
       <div className="flex flex-col items-center max-w-2xl w-full space-y-8">
@@ -33,12 +35,12 @@ const AboutMe = () => {
 
           <p>
             I'm always trying to work on something on the side (technical or otherwise). You can check out some of my projects{" "}
-            <a
+            <Link
               href="/projects"
               className="underline hover:text-brownDark transition-colors"
             >
               here
-            </a>
+            </Link>
             .
           </p>
 
