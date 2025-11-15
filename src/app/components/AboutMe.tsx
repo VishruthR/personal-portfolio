@@ -21,7 +21,9 @@ const AboutMe = () => {
 
         <div className="flex flex-col space-y-6 text-brownMuted text-base md:text-lg leading-relaxed w-full text-left font-playfair">
           <p>
-            I learned how to write code in high school and am now working as a software engineer.
+            Whether I was doing math homework or trying to solve a gym leader puzzle in Pokemon White, I've always enjoyed solving problems.
+            When I learned how to write code in high school, I saw how solving problems could help me build things I was passionate about.
+            Since then, I've been studying computer science, working as a software engineer, and creating my own projects.
           </p>
 
           <div className="space-y-3">
@@ -29,20 +31,16 @@ const AboutMe = () => {
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>Proving the cloud is overrated at Roblox by deploying an OLAP database on-prem, saving $500k/year</li>
               <li>Delivering data-driven business insights by improving data pipelines at Klaviyo</li>
-              <li>Solving problems for nonprofits at Hack4Impact UIUC</li>
+              <li>Helping nonprofits increase their impact thru Hack4Impact UIUC</li>
+              <li>And, the{" "}
+                <Link
+                  href="/projects"
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  projects
+                </Link> I've worked on</li>
             </ul>
           </div>
-
-          <p>
-            I'm always trying to work on something on the side (technical or otherwise). You can check out some of my projects{" "}
-            <Link
-              href="/projects"
-              className="underline hover:text-brownDark transition-colors"
-            >
-              here
-            </Link>
-            .
-          </p>
 
           <div className="space-y-3">
             <p>Some more fast facts about me since you've read this far:</p>
@@ -79,17 +77,6 @@ const AboutMe = () => {
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>
                 <a
-                  href="https://www.linkedin.com/in/vishruth-raj/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
-                >
-                  LinkedIn
-                </a>
-                : Obligatory
-              </li>
-              <li>
-                <a
                   href="https://github.com/VishruthR"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -97,7 +84,7 @@ const AboutMe = () => {
                 >
                   GitHub
                 </a>
-                : I like coding, I try to make everything I write public
+                : I like coding, and I try to make everything I write public
               </li>
               <li>
                 <a
@@ -108,7 +95,18 @@ const AboutMe = () => {
                 >
                   Substack
                 </a>
-                : I like writing about projects I work on, books I read, or thoughts I have
+                : Writing bout projects I work on, books I read, or thoughts I have
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/vishruth-raj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  LinkedIn
+                </a>
+                : I don't post but I do try to keep my profile updated
               </li>
             </ul>
           </div>
@@ -134,7 +132,7 @@ const AboutMe = () => {
                   rel="noopener noreferrer"
                   className="underline hover:text-brownDark transition-colors"
                 >
-                  Book Vy got me
+                  Cooking for Two cookbook
                 </a>
                 : I like pretty much everything I've made from this book, but especially the bread pudding
               </p>

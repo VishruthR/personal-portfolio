@@ -23,8 +23,9 @@ const Landing = () => {
         <div className="flex flex-col space-y-4 text-brownMuted text-base md:text-lg leading-relaxed font-playfair">
           <p>
             I'm a master's student studying computer science at the University
-            of Illinois - Urbana Champaign. I've previously worked at Roblox,
-            Klaviyo, and Hack4Impact UIUC primarily in data and infrastructure.
+            of Illinois - Urbana Champaign. I enjoy solving hard problems, especially in data and infrastructure.
+            
+            I've previously worked at Roblox, Klaviyo, and Hack4Impact UIUC.
           </p>
 
           <p className="font-playfair">
@@ -41,7 +42,7 @@ const Landing = () => {
           </p>
 
           <p className="font-playfair">
-            Check out more about me{" "}
+            Read more about me{" "}
             <Link
               href="/about"
               className="underline hover:text-brownDark transition-colors"
