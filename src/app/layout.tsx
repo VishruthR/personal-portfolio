@@ -23,13 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>
-        <div className="w-full h-full min-h-screen bg-beige flex">
+        <div className="w-full h-full min-h-screen bg-beige">
           <NavBar />
-          <div className="flex-1 ml-20 flex flex-col">
-            {children}
-            <Footer />
-          </div>
+          {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
