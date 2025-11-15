@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>
-        <div className="w-full h-full min-h-screen bg-beige">
+        <div className="w-full h-full min-h-screen bg-beige bg-grid">
           <NavBar />
           {children}
         </div>

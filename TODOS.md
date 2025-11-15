@@ -6,3 +6,4 @@
 - [ ] make your website look less like a copy
 - [ ] Adjust pages to not start so close to the top
 - [ ] Verify mobile view
+- [ ] Improve copy on home page + about me page

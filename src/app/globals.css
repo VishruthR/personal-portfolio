@@ -29,3 +29,12 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #F5F1E8;
 }
+
+@layer utilities {
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(215, 208, 199, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(215, 208, 199, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}

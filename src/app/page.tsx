@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-beige w-full h-full">
+    <div className="w-full h-full">
       <div className="w-full md:px-16 sm:px-3">
         <Landing />
       </div>
