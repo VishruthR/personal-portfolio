@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
     <div
-      className="flex flex-col items-center w-full min-h-screen px-6 pt-[10vh]"
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[17vh]"
       id="projects"
     >
       <div className="flex flex-col items-center max-w-2xl w-full space-y-8">

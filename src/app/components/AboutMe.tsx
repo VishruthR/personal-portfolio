@@ -3,7 +3,7 @@ import Link from "next/link";
 const AboutMe = () => {
   return (
     <div
-      className="flex flex-col items-center w-full min-h-screen px-6 pt-[10vh]"
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[17vh]"
       id="about"
     >
       <div className="flex flex-col items-center max-w-2xl w-full space-y-8">
