@@ -114,12 +114,29 @@ const AboutMe = () => {
           </div>
 
           <div className="space-y-2">
-            <p className="font-semibold">Recipes:</p>
+            <p>Recipes:</p>
             <div className="ml-6 space-y-1">
-              <p>NYT Cheesecake: Lots of work, but worth it</p>
-              <p>Mac n' Cheese: Great for friendsgiving</p>
               <p>
-                Book Vy got me: Sorta cheating, but I like pretty much everything I've made from this book
+                <a
+                  href="https://cooking.nytimes.com/recipes/1019037-classic-cheesecake?algo=cooking_search_relevance_metric_ios_and_web&fellback=false&imp_id=8068609243712446&req_id=7236574979289042&surface=cooking-search-web&variant=0_relevance_reranking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  NYT Cheesecake
+                </a>
+                : Lots of work, but worth it
+              </p>
+              <p>
+                <a
+                  href="https://shop.americastestkitchen.com/baking-for-two.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  Book Vy got me
+                </a>
+                : I like pretty much everything I've made from this book, but especially the bread pudding
               </p>
             </div>
           </div>

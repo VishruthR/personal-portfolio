@@ -1,7 +1,6 @@
 - [ ] improve link underline design
-- [ ] Add recipe links
+- [ ] Add recipe links (or make separate recipes page)
 - [ ] make bullet points cooler
-- [ ] experiment with gridlines
 - [ ] Improve projects cards + page layout
 - [ ] make your website look less like a copy
 - [ ] Adjust pages to not start so close to the top
