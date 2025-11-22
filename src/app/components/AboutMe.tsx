@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { BsArrowReturnRight } from "react-icons/bs";
+import IconBullet from "./IconBullet";
 
 const AboutMe = () => {
   return (
@@ -28,17 +30,25 @@ const AboutMe = () => {
 
           <div className="space-y-3">
             <p className="font-playfair">Some of my favorite work includes:</p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>Proving the cloud is overrated at Roblox by deploying an OLAP database on-prem, saving $500k/year</li>
-              <li>Delivering data-driven business insights by improving data pipelines at Klaviyo</li>
-              <li>Helping nonprofits increase their impact thru Hack4Impact UIUC</li>
-              <li>And, the{" "}
+            <ul className="space-y-2 ml-4">
+              <IconBullet icon={BsArrowReturnRight}>
+                Proving the cloud is overrated at Roblox by deploying an OLAP database on-prem, saving $500k/year
+              </IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
+                Delivering data-driven business insights by improving data pipelines at Klaviyo
+              </IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
+                Helping nonprofits increase their impact thru Hack4Impact UIUC
+              </IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
+                And, the{" "}
                 <Link
                   href="/projects"
                   className="underline hover:text-brownDark transition-colors"
                 >
                   projects
-                </Link> I've worked on</li>
+                </Link> I've worked on
+              </IconBullet>
             </ul>
           </div>
 
