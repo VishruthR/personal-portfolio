@@ -1,9 +1,8 @@
 - [ ] improve link underline design
 - [ ] make bullet points cooler
-- [ ] Improve projects cards + page layout
 - [ ] make your website look less like a copy
-- [ ] Adjust pages to not start so close to the top
 - [ ] Verify mobile view
+    - [ ] Project cards on mobile view are not centered
 - [ ] Consider separate recipes page
 - [ ] Make links stand out and be more inviting (i.e. Read More >>)
 - [ ] Improve copy on about me page
