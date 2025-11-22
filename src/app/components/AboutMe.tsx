@@ -95,7 +95,7 @@ const AboutMe = () => {
                 >
                   Substack
                 </a>
-                : Writing bout projects I work on, books I read, or thoughts I have
+                : Writing about projects I work on, books I read, or thoughts I have
               </li>
               <li>
                 <a

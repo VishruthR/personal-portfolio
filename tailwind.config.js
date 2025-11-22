@@ -22,6 +22,7 @@ module.exports = {
         brownDark: "#3D2F23",
         brownLight: "#8B7355",
         brownMuted: "#B29F90",
+        brownProjectBorder: "#917F72",
       },
       height: {
         home: "90vh",

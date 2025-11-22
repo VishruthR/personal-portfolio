@@ -31,6 +31,7 @@ const Projects = () => {
           <div className="space-y-3">
             <p className="font-playfair">Currently:</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>This website!</li>
               <li>Open-source budgeting app so I can track my finances</li>
               <li>
                 An e-ink display like{" "}

@@ -34,7 +34,7 @@ export const Project = ({ project }: ProjectProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-projectBg rounded-lg w-[300px] h-[250px]">
+    <div className="flex flex-col justify-between rounded-lg  w-[320px] h-[300px]">
       {project.screenshot && (
         <div
           className={`w-full overflow-hidden transition-all ease-in-out rounded-t-lg duration-200 ${
@@ -45,12 +45,12 @@ export const Project = ({ project }: ProjectProps) => {
             <img
               src={`/${project.screenshot}`}
               alt={`Project ${project.name} screenshot`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg rounded-b-none border-2 border-brownProjectBorder border-b-0"
             />
           )}
         </div>
       )}
-      <div className="flex flex-col flex-1 justify-between px-3 pt-3 pb-3">
+      <div className={`flex flex-col flex-1 justify-between px-3 pt-3 pb-3 border-2 border-brownProjectBorder ${expanded ? "rounded-lg" : "rounded-b-lg"}`}>
         <div className="space-y-2">
           <div
             className="flex items-center cursor-pointer"

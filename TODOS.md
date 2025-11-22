@@ -6,3 +6,4 @@
 - [ ] Verify mobile view
 - [ ] Consider separate recipes page
 - [ ] Make links stand out and be more inviting (i.e. Read More >>)
+- [ ] Improve copy on about me page
