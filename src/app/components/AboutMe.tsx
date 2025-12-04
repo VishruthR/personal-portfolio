@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsArrowReturnRight } from "react-icons/bs";
 import IconBullet from "./IconBullet";
+import FastFactsCard from "./FastFactsCard";
 
 const AboutMe = () => {
   return (
@@ -53,33 +54,8 @@ const AboutMe = () => {
           </div>
 
           <div className="space-y-3">
-            <p>Some more fast facts about me since you've read this far:</p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>I am currently boxing for the Fighting Illini</li>
-              <li>I enjoy playing pretty much any sport, most recently, I’ve been playing a lot of volleyball</li>
-              <li>I like baking, I’ll link some of my favorite recipes below</li>
-              <li>I dunked a basketball once in my life</li>
-              <li>
-                I am the third most famous Vishruth Raj, behind an{" "}
-                <a
-                  href="https://www.sammprada.com/our-doctors/dr-vishrut-raj/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
-                >
-                  accomplished doctor
-                </a>{" "}
-                and a{" "}
-                <a
-                  href="https://indiabookofrecords.in/fastest-child-to-recite-counting-from-1-100-vishruth/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
-                >
-                  child who counts very fast
-                </a>
-              </li>
-            </ul>
+            <p>Some more fast facts about me:</p>
+            <FastFactsCard />
           </div>
 
           <div className="space-y-3">

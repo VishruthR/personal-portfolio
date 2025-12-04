@@ -6,3 +6,4 @@
     - [ ] Project cards on mobile view are not centered
 - [ ] Consider separate recipes page
 - [ ] Improve copy on about me + landing page
+- [ ] Can't click on items at top of page due to navbar
