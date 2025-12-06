@@ -1,7 +1,11 @@
 import Link from "next/link";
-import { BsArrowReturnRight } from "react-icons/bs";
+import { BsArrowReturnRight, BsBookmarkFill } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import IconBullet from "./IconBullet";
 import FastFactsCard from "./FastFactsCard";
+import Tooltip from "./Tooltip";
+import { useState } from "react";
+import { M_PLUS_1 } from "next/font/google";
 
 const AboutMe = () => {
   return (
@@ -59,45 +63,48 @@ const AboutMe = () => {
           </div>
 
           <div className="space-y-3">
-            <p>Check me out on the internet:</p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>
-                <a
-                  href="https://github.com/VishruthR"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
-                >
-                  GitHub
-                </a>
-                : I like coding, and I try to make everything I write public
-              </li>
-              <li>
-                <a
-                  href="https://substack.com/@pokelord"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
-                >
-                  Substack
-                </a>
-                : Writing about projects I work on, books I read, or thoughts I have
-              </li>
-              <li>
+            <p>Check me out on the elsewhere:</p>
+            <div className="flex justify-center gap-12 mt-8 pt-4">
+              <Tooltip text="I don't post but I do try to keep my profile updated">
                 <a
                   href="https://www.linkedin.com/in/vishruth-raj/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-brownDark transition-colors"
                 >
-                  LinkedIn
+                  <FaLinkedin
+                    size={32}
+                    className="text-brownMuted hover:text-brownDark transition-colors"
+                  />
                 </a>
-                : I don't post but I do try to keep my profile updated
-              </li>
-            </ul>
+              </Tooltip>
+              <Tooltip text="I like coding, and I try to make everything I write public">
+                <a
+                  href="https://github.com/VishruthR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub
+                    size={32}
+                    className="text-brownMuted hover:text-brownDark transition-colors"
+                  />
+                </a>
+              </Tooltip>
+              <Tooltip text="I wrote about my projects, books I read, or thoughts I have.">
+                <a
+                  href="https://substack.com/@pokelord"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BsBookmarkFill
+                    size={32}
+                    className="text-brownMuted hover:text-brownDark transition-colors"
+                  />
+                </a>
+              </Tooltip>
+            </div>
           </div>
 
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <p>Recipes:</p>
             <div className="ml-6 space-y-1">
               <p>
@@ -123,7 +130,7 @@ const AboutMe = () => {
                 : I like pretty much everything I've made from this book, but especially the bread pudding
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -131,4 +138,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-

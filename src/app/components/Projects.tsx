@@ -32,7 +32,14 @@ const Projects = () => {
             <p className="font-playfair">Currently:</p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li>This website!</li>
-              <li>Open-source budgeting app so I can track my finances</li>
+              <li>
+                <a 
+                  href="https://github.com/VishruthR/OpenBudget" 
+                  target="_blank" rel="noopener noreferrer" 
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  Open-source budgeting
+                </a> app so I can track my finances</li>
               <li>
                 An e-ink display like{" "}
                 <a
