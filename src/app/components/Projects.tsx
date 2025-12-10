@@ -44,14 +44,14 @@ const Projects = () => {
                 </a> app so I can track my finances
               </IconBullet>
               <IconBullet icon={BsArrowReturnRight}>
-                An e-ink display like{" "}
+                An{" "}
                 <a
                   href="https://www.youtube.com/watch?v=58QWxoFvtJY"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-brownDark transition-colors"
                 >
-                  this
+                  e-ink display
                 </a>
               </IconBullet>
             </ul>

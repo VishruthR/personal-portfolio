@@ -81,7 +81,7 @@ const NavBar = () => {
               href={item.path}
               className="relative flex items-center justify-center w-12 h-10 px-2 rounded-lg z-10"
             >
-              <Icon size={24} className="relative z-10 text-[#CCB7A6]" />
+              <Icon size={24} className="relative z-10 text-[#CCB7A6] hover:text-brownDark" />
             </Link>
           );
         })}

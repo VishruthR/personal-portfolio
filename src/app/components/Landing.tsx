@@ -29,25 +29,24 @@ const Landing = () => {
           </p>
 
           <p className="font-playfair">
-            If you want to learn more about my professional experience, my
-            resume is{" "}
+            If you want to learn more about my professional experience, check out my{" "}
             <a
               href="/VishruthRajResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-brownDark transition-colors"
             >
-              here
+              resume
             </a>
           </p>
 
           <p className="font-playfair">
-            Read more about me{" "}
+            Read more about{" "}
             <Link
               href="/about"
               className="underline hover:text-brownDark transition-colors"
             >
-              here
+              me
             </Link>
           </p>
 
