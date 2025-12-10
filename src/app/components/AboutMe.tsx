@@ -63,7 +63,7 @@ const AboutMe = () => {
           </div>
 
           <div className="space-y-3">
-            <p>Check me out on the elsewhere:</p>
+            <p>Check me out elsewhere:</p>
             <div className="flex justify-center gap-12 mt-8 pt-4">
               <Tooltip text="I don't post but I do try to keep my profile updated">
                 <a
@@ -89,7 +89,7 @@ const AboutMe = () => {
                   />
                 </a>
               </Tooltip>
-              <Tooltip text="I wrote about my projects, books I read, or thoughts I have.">
+              <Tooltip text="I write about my projects, books I read, or thoughts I have">
                 <a
                   href="https://substack.com/@pokelord"
                   target="_blank"

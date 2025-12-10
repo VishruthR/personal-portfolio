@@ -1,5 +1,7 @@
 import { projects } from "@/data/projects";
 import { Project } from "./Project";
+import { BsArrowReturnRight } from "react-icons/bs";
+import IconBullet from "./IconBullet";
 
 const Projects = () => {
   const groupedProjects = projects.reduce((acc, project) => {
@@ -30,17 +32,18 @@ const Projects = () => {
 
           <div className="space-y-3">
             <p className="font-playfair">Currently:</p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li>This website!</li>
-              <li>
+            <ul className="space-y-2 ml-4">
+              <IconBullet icon={BsArrowReturnRight}>This website!</IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
                 <a 
                   href="https://github.com/VishruthR/OpenBudget" 
                   target="_blank" rel="noopener noreferrer" 
                   className="underline hover:text-brownDark transition-colors"
                 >
                   Open-source budgeting
-                </a> app so I can track my finances</li>
-              <li>
+                </a> app so I can track my finances
+              </IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
                 An e-ink display like{" "}
                 <a
                   href="https://www.youtube.com/watch?v=58QWxoFvtJY"
@@ -50,7 +53,7 @@ const Projects = () => {
                 >
                   this
                 </a>
-              </li>
+              </IconBullet>
             </ul>
           </div>
 

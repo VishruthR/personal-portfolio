@@ -1,6 +1,5 @@
 - [ ] improve link underline design
 - [ ] Make links stand out and be more inviting (i.e. Read More >>)
-- [ ] make bullet points cooler
 - [ ] make your website look less like a copy
 - [ ] Verify mobile view
     - [ ] Project cards on mobile view are not centered
