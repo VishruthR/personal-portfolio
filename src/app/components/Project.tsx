@@ -34,7 +34,7 @@ export const Project = ({ project }: ProjectProps) => {
   };
 
   return (
-    <div className="flex flex-col justify-between rounded-lg  w-[320px] h-[300px]">
+    <div className="flex flex-col justify-between rounded-lg w-full max-w-[320px] h-[300px] min-w-0">
       {project.screenshot && (
         <div
           className={`w-full overflow-hidden transition-all ease-in-out rounded-t-lg duration-200 ${

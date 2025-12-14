@@ -1,8 +1,5 @@
-- [ ] improve link underline design
-- [ ] Make links stand out and be more inviting (i.e. Read More >>)
 - [ ] make your website look less like a copy
-- [ ] Verify mobile view
-    - [ ] Project cards on mobile view are not centered
+    - [ ] Find out how to give proper credit
 - [ ] Consider separate recipes page
 - [ ] Improve copy on about me + landing page
 - [ ] Can't click on items at top of page due to navbar

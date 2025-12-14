@@ -62,9 +62,11 @@ const Projects = () => {
               <h2 className="font-playfair text-2xl md:text-3xl font-normal text-brown">
                 {year}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full min-w-0">
                 {groupedProjects[year].map((project) => (
-                  <Project key={project.name} project={project} />
+                  <div key={project.name} className="min-w-0 flex justify-center">
+                    <Project project={project} />
+                  </div>
                 ))}
               </div>
             </div>
