@@ -39,7 +39,7 @@ const NavBar = () => {
   const hydrated = useHydrated();
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-  const [indicatorX, setIndicatorX] = useState(0);
+  const [indicatorX, setIndicatorX] = useState(8);
 
   // Calculate x position of active indicator
   const findIndicatorPosition = useCallback(() => {
@@ -49,17 +49,26 @@ const NavBar = () => {
       const container = containerRef.current;
       const itemRect = activeItem?.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
-      const x = itemRect ? itemRect.left - containerRect.left : 0;
+      const x = itemRect ? itemRect.left - containerRect.left : 8;
       setIndicatorX(x);
     }
   }, [pathname]);
 
   useEffect(() => {
-    findIndicatorPosition();
+    // Wait for refs to be populated by deferring to next frame
+    const rafId = requestAnimationFrame(() => {
+      // Double RAF to ensure DOM is fully ready
+      requestAnimationFrame(() => {
+        findIndicatorPosition();
+      });
+    });
 
     window.addEventListener('resize', findIndicatorPosition);
-    return () => window.removeEventListener('resize', findIndicatorPosition);
-  }, [pathname, findIndicatorPosition]);
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', findIndicatorPosition);
+    };
+  }, [pathname, findIndicatorPosition, hydrated]);
 
   if (!hydrated) {
     return null;
@@ -77,7 +86,7 @@ const NavBar = () => {
           return (
             <Link
               key={`navbar-item-${item.path}-${item.name}`}
-              ref={(el) => { itemRefs.current[index] = el; }}
+              ref={(el) => itemRefs.current[index] = el}
               href={item.path}
               className="relative flex items-center justify-center w-12 h-10 px-2 rounded-lg z-10"
             >
