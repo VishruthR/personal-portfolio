@@ -66,10 +66,10 @@ const NavBar = () => {
   }
 
   return (
-    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full pt-12 pb-4">
+    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full pt-12 pb-4 pointer-events-none">
       <div 
         ref={containerRef}
-        className="relative flex gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2 shadow-sm" 
+        className="relative flex gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2 shadow-sm pointer-events-auto" 
         style={{ boxShadow: '0 2px 12px rgba(92, 74, 58, 0.18)' }}
       >
         {navbarItems.map((item, index) => {

@@ -7,7 +7,7 @@ export const facts = [
     of volleyball
   </span>,
   <span key="baking">
-    I like baking, hopefully I can list some of my favorite recipes on this website soon
+    I like baking
   </span>,
   <span key="dunk">I dunked a basketball once in my life</span>,
   <span key="famous">
