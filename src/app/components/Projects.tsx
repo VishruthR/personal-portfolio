@@ -27,7 +27,7 @@ const Projects = () => {
 
         <div className="flex flex-col space-y-6 text-brownMuted text-base md:text-lg leading-relaxed w-full text-left font-playfair">
           <p>
-            I love building my own projects. Here's an incomplete list of things I've worked on.
+            I love building my own projects. Here&apos;s an incomplete list of things I&apos;ve worked on.
           </p>
 
           <div className="space-y-3">

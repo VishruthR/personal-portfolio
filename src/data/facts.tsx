@@ -1,7 +1,7 @@
 import React from "react";
 
 export const facts = [
-  <span key="boxing">I'm currently boxing for the Fighting Illini</span>,
+  <span key="boxing">I&apos;m currently boxing for the Fighting Illini</span>,
   <span key="sports">
     I enjoy playing pretty much any sport, most recently, I’ve been playing a lot
     of volleyball

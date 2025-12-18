@@ -17,15 +17,15 @@ const Landing = () => {
     >
       <div className="flex flex-col max-w-2xl space-y-12">
         <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal text-brown whitespace-nowrap">
-          Hey, I'm Vishruth
+          Hey, I&apos;m Vishruth
         </h1>
 
         <div className="flex flex-col space-y-4 text-brownMuted text-base md:text-lg leading-relaxed font-playfair">
           <p>
-            I'm a master's student studying computer science at the University
+            I&apos;m a master&apos;s student studying computer science at the University
             of Illinois - Urbana Champaign. I enjoy solving hard problems, especially in data and infrastructure.
             
-            I've previously worked at Roblox, Klaviyo, and Hack4Impact UIUC.
+            I&apos;ve previously worked at Roblox, Klaviyo, and Hack4Impact UIUC.
           </p>
 
           <p className="font-playfair">

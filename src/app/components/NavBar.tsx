@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useHydrated } from "@/hooks/useHydrated";
 import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { HiHome } from "react-icons/hi";
 import { HiUser } from "react-icons/hi";
 import { HiWrenchScrewdriver } from "react-icons/hi2";
@@ -42,17 +42,17 @@ const NavBar = () => {
   const [indicatorX, setIndicatorX] = useState(0);
 
   // Calculate x position of active indicator
-  const findIndicatorPosition = () => {
+  const findIndicatorPosition = useCallback(() => {
     const activeIndex = navbarItems.findIndex(item => item.path === pathname);
     if (activeIndex !== -1 && itemRefs.current[activeIndex] && containerRef.current) {
       const activeItem = itemRefs.current[activeIndex];
       const container = containerRef.current;
-      const itemRect = activeItem.getBoundingClientRect();
+      const itemRect = activeItem?.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
-      const x = itemRect.left - containerRect.left;
+      const x = itemRect ? itemRect.left - containerRect.left : 0;
       setIndicatorX(x);
     }
-  };
+  }, [pathname]);
 
   useEffect(() => {
     findIndicatorPosition();

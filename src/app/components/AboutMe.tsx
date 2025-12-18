@@ -4,8 +4,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import IconBullet from "./IconBullet";
 import FastFactsCard from "./FastFactsCard";
 import Tooltip from "./Tooltip";
-import { useState } from "react";
-import { M_PLUS_1 } from "next/font/google";
 
 const AboutMe = () => {
   return (
@@ -28,9 +26,9 @@ const AboutMe = () => {
 
         <div className="flex flex-col space-y-6 text-brownMuted text-base md:text-lg leading-relaxed w-full text-left font-playfair">
           <p>
-            Whether I was doing math homework or trying to solve a gym leader puzzle in Pokemon White, I've always enjoyed solving problems.
+            Whether I was doing math homework or trying to solve a gym leader puzzle in Pokemon White, I&apos;ve always enjoyed solving problems.
             When I learned how to write code in high school, I saw how solving problems could help me build things I was passionate about.
-            Since then, I've been studying computer science, working as a software engineer, and creating my own projects.
+            Since then, I&apos;ve been studying computer science, working as a software engineer, and creating my own projects.
           </p>
 
           <div className="space-y-3">
@@ -52,7 +50,7 @@ const AboutMe = () => {
                   className="underline hover:text-brownDark transition-colors"
                 >
                   projects
-                </Link> I've worked on
+                </Link> I&apos;ve worked on
               </IconBullet>
             </ul>
           </div>
@@ -65,7 +63,7 @@ const AboutMe = () => {
           <div className="space-y-3">
             <p>Check me out elsewhere:</p>
             <div className="flex justify-center gap-12 mt-8 pt-4">
-              <Tooltip text="I don't post but I do try to keep my profile updated">
+              <Tooltip text="I don&apos;t post but I do try to keep my profile updated">
                 <a
                   href="https://www.linkedin.com/in/vishruth-raj/"
                   target="_blank"
