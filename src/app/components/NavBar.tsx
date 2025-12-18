@@ -1,135 +1,109 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
-import { BREAKPOINTS, links } from "../../data/utils";
-import { useEffect, useState } from "react";
-import { useBreakpoint } from "use-breakpoint";
-import { Menu } from "./Menu";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { useHydrated } from "@/hooks/useHydrated";
+import { motion } from "framer-motion";
+import { useRef, useEffect, useState, useCallback } from "react";
+import { HiHome } from "react-icons/hi";
+import { HiUser } from "react-icons/hi";
+import { HiWrenchScrewdriver } from "react-icons/hi2";
 
 const navbarItems = [
   {
     name: "HOME",
-    element: "landing",
+    path: "/",
+    icon: HiHome,
   },
   {
-    name: "EXPERIENCE",
-    element: "experience",
+    name: "ABOUT",
+    path: "/about",
+    icon: HiUser,
   },
   {
     name: "PROJECTS",
-    element: "projects",
+    path: "/projects",
+    icon: HiWrenchScrewdriver,
   },
 ];
 
 interface NavbarItem {
   name: string;
-  element: string;
+  path: string;
+  icon: React.ComponentType<{ className?: string; size?: number }>;
 }
 
 const NavBar = () => {
-  const [closestNavbarItem, setClosestNavbarItem] = useState(navbarItems[0]);
-  const { breakpoint } = useBreakpoint(BREAKPOINTS);
-  const isDesktop = breakpoint === "desktop";
+  const pathname = usePathname();
   const hydrated = useHydrated();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [indicatorX, setIndicatorX] = useState(0);
 
-  const handleClick = (element: string) => {
-    const elementToScroll = document.getElementById(element);
-
-    if (!elementToScroll) {
-      return;
+  // Calculate x position of active indicator
+  const findIndicatorPosition = useCallback(() => {
+    const activeIndex = navbarItems.findIndex(item => item.path === pathname);
+    if (activeIndex !== -1 && itemRefs.current[activeIndex] && containerRef.current) {
+      const activeItem = itemRefs.current[activeIndex];
+      const container = containerRef.current;
+      const itemRect = activeItem?.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const x = itemRect ? itemRect.left - containerRect.left : 0;
+      setIndicatorX(x);
     }
-
-    const y = elementToScroll.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
+  }, [pathname]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const yOffsets = navbarItems.map((item) => {
-        const element = document.getElementById(item.element);
+    findIndicatorPosition();
 
-        if (!element) {
-          return -1000;
-        }
-
-        // Get middle of element box and subtract from window Y
-        return (
-          element.getBoundingClientRect().top -
-          element.getBoundingClientRect().bottom / 2 +
-          element.getBoundingClientRect().bottom -
-          window.scrollY
-        );
-      });
-
-      const minIdx = yOffsets.reduce((smallestIdx, currNum, currIdx) => {
-        if (Math.abs(yOffsets[smallestIdx]) > currNum) {
-          return currIdx;
-        } else {
-          return smallestIdx;
-        }
-      }, 0);
-
-      setClosestNavbarItem(navbarItems[minIdx]);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    window.addEventListener('resize', findIndicatorPosition);
+    return () => window.removeEventListener('resize', findIndicatorPosition);
+  }, [pathname, findIndicatorPosition]);
 
   if (!hydrated) {
     return null;
   }
 
-  const renderNavbarItem = (item: NavbarItem) => {
-    return (
-      <div
-        key={`navbar-item-${item.element}`}
-        className={`mx-4 cursor-pointer w-min ${
-          item.name === closestNavbarItem.name
-            ? "border-b-teal border-b-2"
-            : "border-none"
-        }`}
-        onClick={() => handleClick(item.element)}
-      >
-        <p
-          className={`${
-            item.name === closestNavbarItem.name ? "text-teal" : "text-white"
-          } hover:text-teal`}
-        >
-          {item.name}
-        </p>
-      </div>
-    );
-  };
-
   return (
-    <div className="flex justify-between sticky top-0 left-0 z-[2000] items-center w-full bg-backgroundBlack h-14 border-b-[3px] border-b-white">
-      <div className="flex px-2">
-        <a href={links.github} target="_blank">
-          <AiFillGithub className="mx-2" color="white" size={32} />
-        </a>
-        <a href={links.linkedin} target="_blank">
-          <FaLinkedin className="mx-2" color="white" size={32} />
-        </a>
+    <div className="flex justify-center sticky top-0 left-0 z-[2000] items-center w-full pt-12 pb-4 pointer-events-none">
+      <div 
+        ref={containerRef}
+        className="relative flex gap-1 bg-[#F6F1E9] rounded-xl px-2 py-2 shadow-sm pointer-events-auto" 
+        style={{ boxShadow: '0 2px 12px rgba(92, 74, 58, 0.18)' }}
+      >
+        {navbarItems.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <Link
+              key={`navbar-item-${item.path}-${item.name}`}
+              ref={(el) => { itemRefs.current[index] = el; }}
+              href={item.path}
+              className="relative flex items-center justify-center w-12 h-10 px-2 rounded-lg z-10"
+            >
+              <Icon size={24} className="relative z-10 text-[#CCB7A6] hover:text-brownDark" />
+            </Link>
+          );
+        })}
+        {navbarItems.some(item => item.path === pathname) && (
+          <motion.div
+            className="absolute top-2 bottom-2 bg-[#FEFEFE] rounded-lg"
+            style={{
+              width: 48, // w-12 = 48px
+            }}
+            initial={false}
+            // Animating only x position prevents vertical animations as position of navbar shifts
+            animate={{
+              left: indicatorX,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 380,
+              damping: 30,
+            }}
+          />
+        )}
       </div>
-      <div className="absolute left-1/2">
-        <img src="/logo.png" alt="Vishruth Raj logo" />
-      </div>
-      {isDesktop ? (
-        <div className="flex pr-3">
-          {navbarItems.map((item) => renderNavbarItem(item))}
-        </div>
-      ) : (
-        <div>
-          <Menu>{navbarItems.map((item) => renderNavbarItem(item))}</Menu>{" "}
-        </div>
-      )}
     </div>
   );
 };

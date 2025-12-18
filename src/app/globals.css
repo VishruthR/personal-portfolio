@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .font-playfair {
+    font-family: var(--font-playfair), serif;
+  }
+  .font-inter {
+    font-family: var(--font-inter), sans-serif;
+  }
+  
+  a {
+    color: #8E8A84;
+    text-decoration-line: none;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a.underline {
+    text-decoration-line: none;
+  }
+  
+  a:not(:has(svg))::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    opacity: 0.3;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,5 +49,14 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #121212;
+  background: #F5F1E8;
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(215, 208, 199, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(215, 208, 199, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
 }

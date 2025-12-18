@@ -1,7 +1,11 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata = {
   title: "Vishruth Raj",
@@ -18,7 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>
+        <div className="w-full h-full min-h-screen bg-beige bg-grid">
+          <NavBar />
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

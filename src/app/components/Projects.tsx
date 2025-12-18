@@ -1,120 +1,77 @@
-"use client";
-
 import { projects } from "@/data/projects";
 import { Project } from "./Project";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "@/app/styles.css";
-import { CarouselButtonGroup } from "./CarouselArrows";
-
-interface CustomDotProps {
-  onClick: () => void;
-  active: boolean;
-}
-
-const responsive = {
-  desktopPlus: {
-    breakpoint: { max: 3000, min: 1570 },
-    items: 4,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 0,
-  },
-  desktopMid: {
-    breakpoint: { max: 1570, min: 1450 },
-    items: 3,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 70,
-  },
-  desktop: {
-    breakpoint: { max: 1450, min: 1350 },
-    items: 3,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 40,
-  },
-  tabletPlusPlus: {
-    breakpoint: { max: 1350, min: 1200 },
-    items: 2,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 140,
-  },
-  tabletPlus: {
-    breakpoint: { max: 1200, min: 1100 },
-    items: 2,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 100,
-  },
-  tablet: {
-    breakpoint: { max: 1100, min: 940 },
-    items: 2,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 40,
-  },
-  mobilePlusPlus: {
-    breakpoint: { max: 940, min: 800 },
-    items: 1,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 300,
-  },
-  mobilePlus: {
-    breakpoint: { max: 800, min: 490 },
-    items: 1,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 150,
-  },
-  mobile: {
-    breakpoint: { max: 490, min: 0 },
-    items: 1,
-    slidesToSlide: 1,
-    partialVisibilityGutter: 0,
-  },
-};
-
-const CustomDot = ({ onClick, active }: CustomDotProps) => {
-  return (
-    <div
-      onClick={(e) => {
-        onClick();
-        e.preventDefault();
-      }}
-      className="flex items-center justify-center rounded-full w-3 h-3 bg-lightGray mx-2"
-    >
-      <div
-        className={`rounded-full w-2 h-2 ${
-          active ? "bg-lightGray " : "bg-darkGray"
-        }`}
-      />
-    </div>
-  );
-};
+import { BsArrowReturnRight } from "react-icons/bs";
+import IconBullet from "./IconBullet";
 
 const Projects = () => {
+  const groupedProjects = projects.reduce((acc, project) => {
+    const year = project.year;
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(project);
+    return acc;
+  }, {} as Record<string, typeof projects>);
+
+  const sortedYears = Object.keys(groupedProjects).sort((a, b) => b.localeCompare(a));
+
   return (
-    <div className="my-8 py-8 relative" id="projects">
-      <p className="text-white font-bold md:text-6xl sm:text-4xl mb-8">
-        Projects
-      </p>
-      <div className="min-h-[350px]">
-        <Carousel
-          swipeable={false}
-          draggable={false}
-          responsive={responsive}
-          keyBoardControl={true}
-          partialVisbile={true}
-          infinite={true}
-          showDots={true}
-          arrows={false}
-          // @ts-ignore
-          customDot={<CustomDot />}
-          renderButtonGroupOutside={true}
-          // @ts-ignore
-          customButtonGroup={<CarouselButtonGroup />}
-        >
-          {projects.map((project) => (
-            <div key={`project-${project.name}`} className="h-[97%]">
-              <Project project={project} />
+    <div
+      className="flex flex-col items-center w-full min-h-screen px-6 pt-[10vh]"
+      id="projects"
+    >
+      <div className="flex flex-col items-center max-w-2xl w-full space-y-8">
+        <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-brown w-full">
+          Projects
+        </h1>
+
+        <div className="flex flex-col space-y-6 text-brownMuted text-base md:text-lg leading-relaxed w-full text-left font-playfair">
+          <p>
+            I love building my own projects. Here&apos;s an incomplete list of things I&apos;ve worked on.
+          </p>
+
+          <div className="space-y-3">
+            <p className="font-playfair">Currently:</p>
+            <ul className="space-y-2 ml-4">
+              <IconBullet icon={BsArrowReturnRight}>This website!</IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
+                <a 
+                  href="https://github.com/VishruthR/OpenBudget" 
+                  target="_blank" rel="noopener noreferrer" 
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  Open-source budgeting
+                </a> app so I can track my finances
+              </IconBullet>
+              <IconBullet icon={BsArrowReturnRight}>
+                An{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=58QWxoFvtJY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-brownDark transition-colors"
+                >
+                  e-ink display
+                </a>
+              </IconBullet>
+            </ul>
+          </div>
+
+          {sortedYears.map((year) => (
+            <div key={year} className="space-y-4">
+              <h2 className="font-playfair text-2xl md:text-3xl font-normal text-brown">
+                {year}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full min-w-0">
+                {groupedProjects[year].map((project) => (
+                  <div key={project.name} className="min-w-0 flex justify-center">
+                    <Project project={project} />
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
-        </Carousel>
+        </div>
       </div>
     </div>
   );
