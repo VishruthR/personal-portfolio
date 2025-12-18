@@ -1,3 +1,0 @@
-- [ ] make your website look less like a copy
-    - [ ] Find out how to give proper credit
-- [ ] Improve copy on about me + landing page
