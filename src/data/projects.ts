@@ -33,17 +33,6 @@ export const projects = [
     year: "2023",
   },
   {
-    name: "VoyceMe",
-    sentence: "Reinventing the webcomic experience.",
-    description:
-      "VoyceMe aims to allow webcomic authors and readers to connect in a new way. I implemented a twitter-esque feed which allows readers to follow and interact with their favorite authors.",
-    live: "https://www.voyce.me/plaza",
-    github: null,
-    screenshot: "voyceme.png",
-    skills: ["React", "TailwindCSS", "GraphQL"],
-    year: "2023",
-  },
-  {
     name: "VacayFinder",
     sentence: "Vacation planning simplified.",
     description:
