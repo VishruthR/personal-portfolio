@@ -24,7 +24,7 @@ const Tooltip = ({ text, children }: TooltipProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full mt-3 px-2 py-2 bg-brownMuted text-projectBg text-xs rounded-xl w-max max-w-[300px] text-center z-10 font-playfair shadow-lg"
+            className="absolute top-full mt-3 px-2 py-2 bg-brownMuted text-projectBg text-xs rounded-xl w-max max-w-[300px] text-center z-10 font-inter shadow-lg"
           >
             {text}
             {/* Arrow */}

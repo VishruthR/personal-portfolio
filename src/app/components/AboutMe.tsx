@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BsArrowReturnRight, BsBookmarkFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import IconBullet from "./IconBullet";
@@ -16,11 +17,15 @@ const AboutMe = () => {
           A little about me
         </h1>
 
-        <div className="w-full max-w-lg rounded-lg overflow-hidden">
-          <img
+        <div className="w-full max-w-lg rounded-lg overflow-hidden relative">
+          <Image
             src="/headshot_new.png"
             alt="Vishruth Raj"
+            width={512}
+            height={512}
             className="w-full h-auto rounded-lg"
+            sizes="(max-width: 768px) 100vw, 512px"
+            priority
           />
         </div>
 

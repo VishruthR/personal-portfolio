@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { BiSolidChevronRight, BiSolidChevronDown } from "react-icons/bi";
 
@@ -37,15 +38,17 @@ export const Project = ({ project }: ProjectProps) => {
     <div className="flex flex-col justify-between rounded-lg w-full max-w-[320px] h-[300px] min-w-0">
       {project.screenshot && (
         <div
-          className={`w-full overflow-hidden transition-all ease-in-out rounded-t-lg duration-200 ${
+          className={`w-full overflow-hidden transition-all ease-in-out rounded-t-lg duration-200 relative ${
             expanded ? "h-0" : "h-[65%]"
           }`}
         >
           {!expanded && (
-            <img
+            <Image
               src={`/${project.screenshot}`}
               alt={`Project ${project.name} screenshot`}
-              className="w-full h-full object-cover rounded-lg rounded-b-none border-2 border-brownProjectBorder border-b-0"
+              fill
+              className="object-cover rounded-lg rounded-b-none border-2 border-brownProjectBorder border-b-0"
+              sizes="(max-width: 768px) 100vw, 320px"
             />
           )}
         </div>
