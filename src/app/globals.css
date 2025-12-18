@@ -47,9 +47,22 @@
   }
 }
 
+html {
+  background: #FAF7F3;
+  background-image: 
+    linear-gradient(rgba(215, 208, 199, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215, 208, 199, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  height: 100%;
+  height: -webkit-fill-available; /* iOS Safari fix */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: #F5F1E8;
+  background: transparent; /* Let html background show through */
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* iOS Safari fix */
 }
 
 @layer utilities {

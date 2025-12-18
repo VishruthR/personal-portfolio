@@ -13,6 +13,9 @@ export const metadata = {
   icons: {
     icon: "/logo.png",
   },
+  other: {
+    "viewport": "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover",
+  },
 };
 
 export default function RootLayout({
@@ -21,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} ${inter.variable} ${playfair.variable}`}>
-        <div className="w-full h-full min-h-screen bg-beige bg-grid">
+    <html lang="en" className="h-full">
+      <body className={`${inter.className} ${inter.variable} ${playfair.variable} h-full flex flex-col`}>
+        <div className="flex-1 w-full">
           <NavBar />
           {children}
         </div>
