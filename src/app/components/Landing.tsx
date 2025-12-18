@@ -12,7 +12,7 @@ const Landing = () => {
 
   return (
     <div
-      className="flex flex-col items-center w-full min-h-screen px-6 pt-[15vh]"
+      className="flex flex-col items-center w-full min-h-screen px-6 md:pt-[15vh] sm:pt-[10vh]"
       id="landing"
     >
       <div className="flex flex-col max-w-2xl space-y-12">
