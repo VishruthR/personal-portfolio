@@ -41,7 +41,7 @@ const Landing = () => {
           </p>
 
           <p className="font-playfair">
-            Read more about{" "}
+            Or, read more about{" "}
             <Link
               href="/about"
               className="underline hover:text-brownDark transition-colors"

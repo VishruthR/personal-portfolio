@@ -1,39 +1,38 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import { cloneElement, isValidElement } from "react";
+import "react-tooltip/dist/react-tooltip.css";
 
 interface TooltipProps {
-  text: string;
+  id: string;
+  content: string;
   children: React.ReactNode;
 }
 
-const Tooltip = ({ text, children }: TooltipProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+const Tooltip = ({ id, content, children }: TooltipProps) => {
+  // Clone the child element and add data attributes
+  const childWithProps = isValidElement(children)
+    ? cloneElement(children as React.ReactElement, {
+        "data-tooltip-id": id,
+        "data-tooltip-content": content,
+      })
+    : children;
 
   return (
-    <div
-      className="relative flex flex-col items-center"
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-    >
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full mt-3 px-2 py-2 bg-brownMuted text-projectBg text-xs rounded-xl w-max max-w-[300px] text-center z-10 font-inter shadow-lg"
-          >
-            {text}
-            {/* Arrow */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-brownMuted" />
-          </motion.div>
-        )}
-      </AnimatePresence>
-      {children}
-    </div>
+    <>
+      {childWithProps}
+      <ReactTooltip
+        id={id}
+        place="bottom"
+        className="!bg-brownMuted !text-projectBg !text-xs !rounded-xl !px-2 !z-50 !font-inter !shadow-lg"
+        style={{
+          textAlign: "center",
+          paddingLeft: "0.25rem",
+          paddingRight: "0.25rem",
+        }}
+      />
+    </>
   );
 };
 

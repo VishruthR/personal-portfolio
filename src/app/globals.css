@@ -73,3 +73,17 @@ body {
     background-size: 20px 20px;
   }
 }
+
+/* React Tooltip custom styling */
+:root {
+  --rt-color-white: #EFE9DE;
+  --rt-color-dark: #B29F90;
+  --rt-opacity: 1;
+  --rt-transition-show-delay: 0.15s;
+  --rt-transition-closing-delay: 0.15s;
+}
+
+/* Override react-tooltip arrow color to match theme */
+.react-tooltip-arrow {
+  border-top-color: #B29F90 !important;
+}

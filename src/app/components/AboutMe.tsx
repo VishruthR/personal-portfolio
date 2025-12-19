@@ -68,7 +68,7 @@ const AboutMe = () => {
           <div className="space-y-3">
             <p>Check me out elsewhere:</p>
             <div className="flex justify-center gap-12 mt-8 pt-4">
-              <Tooltip text="I don&apos;t post but I do try to keep my profile updated">
+              <Tooltip id="linkedin-tooltip" content="I don't post, but I do try to keep my profile updated">
                 <a
                   href="https://www.linkedin.com/in/vishruth-raj/"
                   target="_blank"
@@ -80,7 +80,7 @@ const AboutMe = () => {
                   />
                 </a>
               </Tooltip>
-              <Tooltip text="I like coding, and I try to make everything I write public">
+              <Tooltip id="github-tooltip" content="I like coding, and I try to make everything I write public">
                 <a
                   href="https://github.com/VishruthR"
                   target="_blank"
@@ -92,7 +92,7 @@ const AboutMe = () => {
                   />
                 </a>
               </Tooltip>
-              <Tooltip text="I write about my projects, books I read, or thoughts I have">
+              <Tooltip id="substack-tooltip" content="I write about my projects, books I read, or thoughts I have">
                 <a
                   href="https://substack.com/@pokelord"
                   target="_blank"
