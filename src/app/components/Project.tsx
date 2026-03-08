@@ -14,6 +14,7 @@ interface Project {
   screenshot: string;
   skills: string[];
   year: string;
+  objectFit?: string;
 }
 
 interface ProjectProps {
@@ -47,7 +48,7 @@ export const Project = ({ project }: ProjectProps) => {
               src={`/${project.screenshot}`}
               alt={`Project ${project.name} screenshot`}
               fill
-              className="object-cover rounded-lg rounded-b-none border-2 border-brownProjectBorder border-b-0"
+              className={`${project.objectFit ? `object-${project.objectFit}` : 'object-contain'} rounded-lg rounded-b-none border-2 border-brownProjectBorder border-b-0`}
               sizes="(max-width: 768px) 100vw, 320px"
             />
           )}

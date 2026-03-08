@@ -1,5 +1,15 @@
 export const projects = [
   {
+    name: "Pic Swipe",
+    sentence: "I've got too many photos",
+    description: "I have too many photos, but deleting them one by one is boring. So I vibecoded an app that makes deleting photos a bit smoother. Not super polished, but it gets the job done. Preview accessible through GitHub.",
+    live: null,
+    github: "https://github.com/VishruthR/pic-swipe",
+    screenshot: "picswipe.png",
+    skills: ["Claude", "Cursor", "Expo Go"],
+    year: "2025"
+  },
+  {
     name: "Poker Practice",
     sentence: "To beat my friends",
     description:
@@ -20,6 +30,7 @@ export const projects = [
     screenshot: "Polychaeta.png",
     skills: ["Postgres", "Grafana", "AWS"],
     year: "2025",
+    objectFit: "cover",
   },
   {
     name: "Material UI",
