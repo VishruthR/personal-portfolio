@@ -32,5 +32,16 @@ export const facts = [
     </a>
   </span>,
   <span key="boxing">I&apos;m part of my schools boxing team, the Fighting Illini</span>,
+  <span key="pokemon">I&apos;m a top 100 pokemon player <br/> (
+    <a 
+      href="https://pokemonshowdown.com/users/pokelord248"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()}
+    >
+      in a very specific gamemode
+    </a>)
+  </span>,
+  <span key="juggling">I can juggle</span>
 ];
 
